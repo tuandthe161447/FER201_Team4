@@ -1,0 +1,99 @@
+{
+  "users": [
+    {},
+    {
+      "id": 2,
+      "uName": "a",
+      "email": "nbakj@gmail.com",
+      "passWord": "cascascas",
+      "rId": false
+    },
+    {
+      "uName": "ascasc",
+      "email": "nbakj@gmail.com",
+      "passWord": "cascascas",
+      "rId": false,
+      "id": 4
+    },
+    {
+      "uName": "asacasccascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 7,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 8,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 9,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 10,
+      "uName": "",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "123456789",
+      "rId": false
+    },
+    {
+      "id": 11,
+      "uName": "",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 12,
+      "uName": "dawfaef",
+      "email": "faesfe@gmail.com",
+      "passWord": "11111111",
+      "rId": false
+    },
+    {
+      "id": 13,
+      "uName": "ádasdsa",
+      "email": "tuan7ad@gmail.com",
+      "passWord": "123456789",
+      "rId": false
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
