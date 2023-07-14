@@ -5,6 +5,7 @@ import Header from './components/header';
 import Slide_hearder from './components/slide_header';
 import Footer from './components/footer';
 import Posts from './components/posts';
+import Category from './components/category';
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
       {/* <Header/> */}
       {/* <Slide_hearder/> */}
       <Routes>
-        <Route path='/posts' element={<Posts/>}/>
+        <Route path='/' element={<Posts/>}/>
+        <Route path='post/category/:cid' element={<Category/>}/>
       </Routes>
       {/* <Footer/> */}
       </BrowserRouter>
-
     </div>
   );
 }

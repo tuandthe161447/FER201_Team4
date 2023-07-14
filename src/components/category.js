@@ -1,12 +1,25 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Sidebar from "./post/sidebar";
 
+const Category = () => {
 
-const Posts = () => {
+    const { cid } = useParams();
+
+    const [c, setCategory] = useState({});
     const [posts, setPosts] = useState([]);
-    const [category, setCategory] = useState([]);
+
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        fetch("http://localhost:9999/category_post/" + cid)
+            .then(res => res.json())
+            .then(data => {
+                setCategory(data)
+            })
+    }, [])
 
     useEffect(() => {
         fetch("http://localhost:9999/post").then((res) => res.json())
@@ -17,36 +30,21 @@ const Posts = () => {
             })
     }, [])
 
-    useEffect(() => {
-        fetch("http://localhost:9999/category_post")
-            .then((res) => res.json())
-            .then((data) => {
-                setCategory(data)
-            }).catch(err => {
-                console.log(err.message)
-            })
-    }, [])
-
-
     return (
         <Container>
             <Row>
                 <Col xs={12}>
-
                     <Row>
                         <Col xs={12}>
                             <h1 className="text-center mb-5">Post List</h1>
                         </Col>
                     </Row>
-                    {/* <Row>
-                        <Col>
-                            <p>Sort by: <select>
-                                <option value="0" key="">Newest</option>
-                                <option value="1" key="">Viewed count</option>
-                            </select>
-                            </p>
+                    <Row>
+                        <Col xs={12}>
+                            <h2>Category: <span className="text-secondary">{c.name}</span></h2>
+                            <button className="btn btn-success mb-2" onClick={() => navigate("/")}>Back to list</button>
                         </Col>
-                    </Row> */}
+                    </Row>
                     <Row>
                         <Col xs={9}>
                             {
@@ -57,14 +55,6 @@ const Posts = () => {
                                         </Col>
                                         <Col xs={9}>
                                             <h2>{p.name}</h2>
-                                            <Row>
-                                                <Col xs={6}>
-                                                    <div>Category: {category.map(c => c.id === p.cid ? c.name : '')}</div>
-                                                </Col>
-                                                <Col xs={6}>
-                                                    <div className="text-right">{p.created_date}</div>
-                                                </Col>
-                                            </Row>
                                         </Col>
                                     </Row>
                                 ))
@@ -76,9 +66,9 @@ const Posts = () => {
                     </Row>
                 </Col>
             </Row>
-        </Container >
 
+        </Container>
     );
 }
 
-export default Posts;
+export default Category;
