@@ -1,0 +1,143 @@
+{
+  "users": [
+    {
+      "uName": "asacasccascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 5,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 6,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 7,
+      "uName": "cascas",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 8,
+      "uName": "",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "123456789",
+      "rId": false
+    },
+    {
+      "id": 9,
+      "uName": "",
+      "email": "nbacsascakcj@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 10,
+      "uName": "dawfaef",
+      "email": "faesfe@gmail.com",
+      "passWord": "11111111",
+      "rId": false
+    },
+    {
+      "id": 11,
+      "uName": "ádasdsa",
+      "email": "tuan7ad@gmail.com",
+      "passWord": "123456789",
+      "rId": false
+    }
+  ],
+  "category_post": [
+    {
+      "id": 1,
+      "name": "Travelling Guide"
+    },
+    {
+      "id": 2,
+      "name": "Travelling Spots"
+    },
+    {
+      "id": 3,
+      "name": "Top List"
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "name": "Npath",
+      "created_date": "4/20/2023",
+      "content": "<p>Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.<br><del><br>Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nis</del>i.dfdfdfgfghfghfgh</p>\n"
+    },
+    {
+      "id": 4,
+      "name": "Flipopia",
+      "cid": 1,
+      "img": "http://dummyimage.com/172x221.png/5fa2dd/ffffff",
+      "content": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+      "created_date": "9/6/2022"
+    },
+    {
+      "id": 6,
+      "name": "Skibox",
+      "cid": 3,
+      "img": "http://dummyimage.com/237x181.png/ff4444/ffffff",
+      "content": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+      "created_date": "5/28/2023"
+    },
+    {
+      "id": 7,
+      "name": "Kimia",
+      "cid": 1,
+      "img": "http://dummyimage.com/159x118.png/dddddd/000000",
+      "content": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      "created_date": "2/21/2023"
+    },
+    {
+      "id": 9,
+      "name": "Thoughtstorm",
+      "cid": 3,
+      "img": "http://dummyimage.com/151x151.png/cc0000/ffffff",
+      "content": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+      "created_date": "6/14/2023"
+    },
+    {
+      "id": 10,
+      "name": "Edgeblab",
+      "cid": 4,
+      "img": "http://dummyimage.com/208x239.png/dddddd/000000",
+      "content": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+      "created_date": "6/7/2023"
+    },
+    {
+      "name": "1111",
+      "created_date": "1111-11-11",
+      "content": "<p>asdkls<em>djfgnasd</em>ljhglsdf</p>\n<p>s</p>\n<p><strong>dfsdf</strong></p>\n<p></p>\n<p></p>\n<img src=\"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg\" alt=\"undefined\" style=\"height: 500px;width: auto\"/>\n<p></p>\n<p></p>\n",
+      "cid": 2,
+      "id": 11
+    },
+    {
+      "name": "sdfgasdfsdaff",
+      "created_date": "1111-11-11",
+      "content": "<p>asdasd\\</p>\n<p></p>\n<p></p>\n<img src=\"https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg\" alt=\"undefined\" style=\"height: 400px;width: auto\"/>\n<p>asdasdasd</p>\n<p></p>\n<p>as</p>\n<p>d</p>\n<img src=\"https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg\" alt=\"undefined\" style=\"height: 400px;width: auto\"/>\n<p></p>\n<img src=\"https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg\" alt=\"undefined\" style=\"height: auto;width: auto\"/>\n<p></p>\n",
+      "cid": 2,
+      "id": 12
+    }
+  ]
+}
