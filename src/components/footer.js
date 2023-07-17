@@ -2,9 +2,9 @@
 
 function Footer() {
     return (
-
-        <footer className='text-center text-lg-start text-white bottom' style={{ backgroundColor: 'rgb(28,35,49)' }}>
-            <div style={{ backgroundColor: 'rgb(99,81,206)' }}>
+      
+            <footer className='text-center text-lg-start text-white' style={{ backgroundColor: 'rgb(28,35,49)' }}>
+                <div style={{ backgroundColor: 'rgb(99,81,206)' }}>
                 <div className='d-flex justify-content-between p-4 container' style={{ backgroundColor: 'rgb(99,81,206)' }}>
                     <div className='me-5'>
                         <span>
