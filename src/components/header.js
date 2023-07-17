@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         //top header
-        <div className="row header-app d-flex fixed-top"> 
+        <div className="row header-app d-flex"> 
             <Container>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
