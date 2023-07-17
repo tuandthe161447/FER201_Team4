@@ -7,17 +7,31 @@ import Footer from './components/footer';
 import Posts from './components/posts';
 import Category from './components/category';
 
+import PostManager from './components/PostManager';
+import Create from './components/Create';
+import EditPost from './components/EditPost';
+import Usermanager from './components/Usermanager';
+import UserDetail from './components/UserDetail';
+
+
 function App() {
   return (
     <div className='container-fluid' >
+          {<Header/>}
       <BrowserRouter>
-      {/* <Header/> */}
-      {/* <Slide_hearder/> */}
       <Routes>
         <Route path='/' element={<Posts/>}/>
         <Route path='post/category/:cid' element={<Category/>}/>
+
+      {/* <Slide_hearder/> */}
+      <Routes>
+        <Route path='/usermanager' element={<Usermanager/>}/>
+        <Route path='/postmanager' element={<PostManager/>}/>
+        <Route path='/create' element={<Create/>}/>
+        <Route path='/edit/:code' element={<EditPost/>}/>
+        <Route path='/user/:code' element={<UserDetail/>}/>
       </Routes>
-      {/* <Footer/> */}
+      {<Footer/>}
       </BrowserRouter>
     </div>
   );
