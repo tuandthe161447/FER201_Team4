@@ -5,6 +5,8 @@ import Header from './components/header';
 import Slide_hearder from './components/slide_header';
 import Footer from './components/footer';
 import Posts from './components/posts';
+import Category from './components/category';
+
 import PostManager from './components/PostManager';
 import Create from './components/Create';
 import EditPost from './components/EditPost';
@@ -15,8 +17,12 @@ import UserDetail from './components/UserDetail';
 function App() {
   return (
     <div className='container-fluid' >
+          {<Header/>}
       <BrowserRouter>
-      {<Header/>}
+      <Routes>
+        <Route path='/' element={<Posts/>}/>
+        <Route path='post/category/:cid' element={<Category/>}/>
+
       {/* <Slide_hearder/> */}
       <Routes>
         <Route path='/usermanager' element={<Usermanager/>}/>
@@ -27,7 +33,6 @@ function App() {
       </Routes>
       {<Footer/>}
       </BrowserRouter>
-
     </div>
   );
 }
