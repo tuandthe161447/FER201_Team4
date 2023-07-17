@@ -12,6 +12,7 @@ import Create from './components/Create';
 import EditPost from './components/EditPost';
 import Usermanager from './components/Usermanager';
 import UserDetail from './components/UserDetail';
+import Test from './components/Test';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
         <Route path='/create' element={<Create/>}/>
         <Route path='/edit/:code' element={<EditPost/>}/>
         <Route path='/user/:code' element={<UserDetail/>}/>
+        <Route path='/test/:code' element={<Test/>}/>
+
       </Routes>
       {<Footer/>}
       </BrowserRouter>
