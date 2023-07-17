@@ -6,10 +6,10 @@ const Header = () => {
 
     return (
         //top header
-        <div className="row header-app d-flex fixed-top"> 
+        <div className="row header-app"> 
             <Container>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">Travelling Blog</Navbar.Brand>
+                    <Navbar.Brand href="/">Travelling Blog</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
