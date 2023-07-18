@@ -18,9 +18,11 @@ const Sign_up = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [confirmPasswordError, setConfirmPasswordError] = useState('');
     const [isAddAble, setIsAddAble] = useState(false);
+    
+    
 
     useEffect(() => {
-        if (uNameError != "" || emailError != "" || passWordError != "" || confirmPasswordError != "") {
+        if (uNameError != "" || emailError != "" || passWordError != "" || confirmPasswordError != "" ) {
             setIsAddAble(false)
             return;
 
@@ -73,7 +75,7 @@ const Sign_up = () => {
 
     return (
 
-        <div className="background_login mb-5 " style={{margin:"200px 0 200px 0"}}>
+        <div className="background_login mb-5 " >
             <div className="mask d-flex align-items-center h-100 gradient-custom-3">
                 <div className="container h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -117,12 +119,7 @@ const Sign_up = () => {
                                             <label style={{ color: 'red' }}>{confirmPasswordError}</label>
                                         </div>
 
-                                        <div className="form-check mb-5">
-                                            <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                                            <label className="form-check-label" for="form2Example3g">
-                                                I agree all statements in <a href="#!" className="text-body"><u>Terms of service</u></a>
-                                            </label>
-                                        </div>
+                                        
 
 
                                         <div className="d-flex justify-content-center">
