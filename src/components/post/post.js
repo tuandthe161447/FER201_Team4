@@ -10,6 +10,8 @@ const Posts = () => {
     const [posts, setPosts] = useState([]);
     const [category, setCategory] = useState([]);
     const [search, setSearch] = useState("");
+    const [filter, setFilter] = useState(0);
+
 
     useEffect(() => {
         fetch("http://localhost:9999/post").then((res) => res.json())
@@ -49,9 +51,9 @@ const Posts = () => {
                                 posts.map((p) => (
                                     <Row className="box post mb-3" key={p.id}>
                                         <Col>
-                                            <Link>
-                                                <h3 className="pt-2" style={{color:'black'}}>{p.title}</h3>
-                                                <h4 className="pl-5" style={{color:'grey'}}>
+                                            <Link to={'/post/detail/' + p.id}>
+                                                <h3 className="pt-2" style={{ color: 'black' }}>{p.title}</h3>
+                                                <h4 className="pl-5" style={{ color: 'grey' }}>
                                                     {
                                                         category.map(c => c.id == p.cid ? c.name : '')
                                                     }
@@ -63,7 +65,22 @@ const Posts = () => {
                             }
                         </Col>
                         <Col xs={3}>
-                            
+                            <div>
+                                <input style={{ width: '350px', height: '50px', borderRadius: '10px' }} type="text" name="seacrh" onSubmit={e => setSearch(e.target.value)} placeholder="Enter post title to search"/>
+                                <button style={{marginTop:'8px'}} type="submit" className="btn btn-primary">Search</button>
+                            </div>
+                            <div>
+                                <h3>Category</h3>
+                                {
+                                    category.map((c) => (
+                                        <div key={c.id}>
+                                            <input  type='radio' name='filter' value={c.id} onChange={e => setFilter(e.target.value)} /> {c.name} <br />
+                                        </div>
+                                    ))
+                                }
+                                <input type='radio' name='filter' value={0} onChange={e => setFilter(e.target.value)} /> All <br />
+
+                            </div>
                         </Col>
                     </Row>
 

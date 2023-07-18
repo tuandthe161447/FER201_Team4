@@ -252,7 +252,7 @@ const PostDetail = () => {
                                         </Button>
                                     </Form>
                                     :
-                                    <div key={c.id}>
+                                    <div className='box commentSection' key={c.id}>
                                         <Row>
                                             <div className='box comment'>
                                                 <Row>
@@ -274,15 +274,15 @@ const PostDetail = () => {
                                         <Row>
                                             {
                                                 (uid === c.uid) ?
-                                                    <div style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }}>
-                                                        <Link to={'#'} onClick={() => handleDelete(c.id)} >Delete</Link>
-                                                        <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }} to={'#'} onClick={() => handleEdit(c.id, c.comment)} >Edit</Link>
-                                                        <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }} to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
+                                                    <div style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '30px' }}>
+                                                        <Link style={{color:'black', fontSize:'20px'}} to={'#'} onClick={() => handleDelete(c.id)} >Delete</Link>
+                                                        <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px', color:'black', fontSize:'20px' }} to={'#'} onClick={() => handleEdit(c.id, c.comment)} >Edit</Link>
+                                                        <Link  style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px', color:'black', fontSize:'20px' }} to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
                                                     </div>
 
                                                     :
-                                                    <div style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }}>
-                                                        <Link to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
+                                                    <div style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '30px' }}>
+                                                        <Link style={{color:'black', fontSize:'20px'}} to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
                                                     </div>
                                             }
                                         </Row>
@@ -339,13 +339,13 @@ const PostDetail = () => {
                                                                                     {
                                                                                         (uid === r.uid) ?
                                                                                             <div style={{ marginTop: '-20px', marginLeft: '100px', marginBottom: '20px', paddingLeft: '10px' }}>
-                                                                                                <Link to={'#'} onClick={() => handleDeleteRep(r.id)} >Delete</Link>
-                                                                                                <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }} to={'#'} onClick={() => handleEditRep(r.id, r.comment, c.id)} >Edit</Link>
-                                                                                                <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }} to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
+                                                                                                <Link style={{color:'black', fontSize:'20px'}} to={'#'} onClick={() => handleDeleteRep(r.id)} >Delete</Link>
+                                                                                                <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px', color:'black', fontSize:'20px' }} to={'#'} onClick={() => handleEditRep(r.id, r.comment, c.id)} >Edit</Link>
+                                                                                                <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px', color:'black', fontSize:'20px' }} to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
                                                                                             </div>
                                                                                             :
                                                                                             <div style={{ marginTop: '-20px', marginLeft: '100px', marginBottom: '20px', paddingLeft: '10px' }}>
-                                                                                                <Link to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
+                                                                                                <Link style={{color:'black', fontSize:'20px'}} to={'#'} onClick={() => handleReply(c.id)} >Reply</Link>
                                                                                             </div>
                                                                                     }
 

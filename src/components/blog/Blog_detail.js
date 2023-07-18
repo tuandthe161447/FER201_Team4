@@ -125,8 +125,12 @@ const BlogDetail = () => {
     return (
         <Container>
             <Row className='pt-3'>
-                <img src={p.img} alt="#" width={150} height={150} />
-                <h1 style={{ margin: '20px' }}>{p.name}</h1>
+                <Col xs={6}>
+                    <img src={p.img} alt="#" width={500} height={500} />
+                </Col>
+                <Col xs={6}>
+                    <h1 style={{ margin: '20px' }}>{p.name}</h1>
+                </Col>
             </Row>
             <Row className='pt-3'>
                 <h4>{content}</h4>
@@ -201,8 +205,8 @@ const BlogDetail = () => {
                                         {
                                             (uid === c.uid) ?
                                                 <Row>
-                                                    <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }} to={'#'} onClick={() => handleDelete(c.id)} >Delete</Link>
-                                                    <Link style={{ marginTop: '-20px', marginBottom: '20px', paddingLeft: '10px' }} to={'#'} onClick={() => handleEdit(c.id, c.comment)} >Edit</Link>
+                                                    <Link style={{ marginTop: '-20px', marginBottom: '', paddingLeft: '30px', color: 'black', fontSize: '20px' }} to={'#'} onClick={() => handleDelete(c.id)} >Delete</Link>
+                                                    <Link style={{ marginTop: '-20px', marginBottom: '', paddingLeft: '30px', color: 'black', fontSize: '20px' }} to={'#'} onClick={() => handleEdit(c.id, c.comment)} >Edit</Link>
                                                 </Row>
                                                 :
                                                 <Row>

@@ -14,7 +14,7 @@ const Home = () => {
         fetch("http://localhost:9999/blog").then((res) => res.json())
             .then((data) => {
                 let Latest = [];
-                Latest = data.slice(0, 3);
+                Latest = data.slice(-3);
                 setBlog(Latest)
             }).catch(err => {
                 console.log(err.message)
@@ -22,7 +22,7 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:9999/category_blog")
+        fetch("http://localhost:9999/category_post")
             .then((res) => res.json())
             .then((data) => {
                 setCategory(data)
@@ -35,7 +35,7 @@ const Home = () => {
         fetch("http://localhost:9999/post").then((res) => res.json())
             .then((data) => {
                 let Latest = [];
-                Latest = data.slice(0, 3);
+                Latest = data.slice(-3);
                 setPosts(Latest)
             }).catch(err => {
                 console.log(err.message)
@@ -48,18 +48,18 @@ const Home = () => {
                 <Slide_hearder />
             </Row>
             <Row>
-                <Container>
+                <Container fluid>
                     <Row>
                         <Col>
-                            <h1 className='text-center pt-5 pb-3'>Trending Blog</h1>
+                            <h1 className='text-center pt-5 pb-3'>New Blogs</h1>
                             <Row>
                                 {
                                     blog.map(p => (
                                         <Col xs={4}>
                                             <Link to={'/blog/detail/' + p.id}>
-                                                <div className='box pt-3'>
+                                                <div className='box home pt-3'>
                                                     <img src={p.img} alt="#" />
-                                                    <h2 style={{ color: 'black' }}>{p.name}</h2>
+                                                    <h2 style={{ color: 'black', margin:'10px' }}>{p.name}</h2>
                                                 </div>
                                             </Link>
                                         </Col>
@@ -70,15 +70,15 @@ const Home = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <h1 className='text-center pt-5 pb-3'>Latest Post</h1>
+                            <h1 className='text-center pt-5 pb-3'>Latest Posts</h1>
                             <Row>
                                 {
                                     posts.map(p => (
                                         <Col xs={4}>
                                             <Link to={'/post/detail/' + p.id}>
-                                                <div className='box pt-3'>
-                                                    <h2 className='pl-2'>{p.title}</h2>
-                                                    <h4 className="pl-2" style={{ color: 'grey' }}>
+                                                <div className='box home pt-3'>
+                                                    <h2 className='pl-2' style={{color:'black', margin:'5px'}}>{p.title}</h2>
+                                                    <h4 className="pl-2" style={{ color: 'grey', marginLeft:'20px' }}>
                                                         {
                                                             category.map(c => c.id == p.cid ? c.name : '')
                                                         }

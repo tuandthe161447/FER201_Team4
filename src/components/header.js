@@ -56,9 +56,22 @@ const Header = () => {
                                         <NavDropdown.Item href="/login" >
                                             {
                                                 userrole == true ? <Nav>
-                                                    <Nav.Link href='/post'style={{color:'black'}}>
-                                                        Manage
+                                                    <Nav.Link href='/postmanager'style={{color:'black'}}>
+                                                        Post Manage
                                                     </Nav.Link>
+                                                    
+                                                </Nav>
+                                                    :
+                                                    <></>
+                                            }
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="/login" >
+                                            {
+                                                userrole == true ? <Nav>
+                                                    <Nav.Link href='/usermanager'style={{color:'black'}}>
+                                                        User Manage
+                                                    </Nav.Link>
+                                                    
                                                 </Nav>
                                                     :
                                                     <></>

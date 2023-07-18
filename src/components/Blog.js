@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 
 
@@ -8,15 +8,24 @@ const Blog = () => {
     const [blog, setBlog] = useState([]);
     const [category, setCategory] = useState([]);
     const [search, setSearch] = useState("");
+    const [allblog, setallBlog] = useState([]);
+    const [filter, setFilter] = useState(0);
 
     useEffect(() => {
         fetch("http://localhost:9999/blog").then((res) => res.json())
             .then((data) => {
-                setBlog(data)
+                if (filter !== 0) {
+                    setBlog(data.filter((p) => (p.cid == filter)));
+                }
+                if (filter == 0) {
+                    setBlog(data);
+                }
+                setallBlog(data);
             }).catch(err => {
                 console.log(err.message)
             })
-    }, [])
+        console.log(filter);
+    }, [filter])
 
 
     useEffect(() => {
@@ -30,10 +39,21 @@ const Blog = () => {
     }, [])
 
     //search
-    const inputSearch = useRef(null);
 
-    const handleSearch = () => {
-        
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (search.length === 0) {
+            if (filter !== 0) {
+                setBlog(allblog.filter((p) => (p.cid == filter)));
+            }
+            else {
+                setBlog(allblog);
+            }
+        }
+        else {
+            setBlog(blog.filter((s) => s.name.includes(search)))
+        }
+        setSearch('');
     }
 
 
@@ -65,7 +85,7 @@ const Blog = () => {
                                 blog.map((p) => (
                                     <Row className="mb-3" style={{ border: '2px solid black', padding: '10px', borderRadius: '10px' }} key={p.id}>
                                         <Col xs={3}>
-                                            <Link to={"/blog/detail/" + p.id}><img src={p.img} alt="#" width={150} height={150} style={{padding: '0' }} /></Link>
+                                            <Link to={"/blog/detail/" + p.id}><img src={p.img} alt="#" width={150} height={150} style={{ padding: '0' }} /></Link>
                                         </Col>
                                         <Col xs={9}>
                                             <Link to={"/blog/detail/" + p.id}><label style={{ fontSize: '30px' }}>{p.name}</label></Link>
@@ -85,8 +105,15 @@ const Blog = () => {
                         <Col xs={3}>
                             <div>
                                 <Form onSubmit={handleSearch}>
-                                    <input ref={inputSearch} className="form-control" type="search" placeholder="Search any post.." />
-                                    <button type="submit" className="btn btn-primary mt-2 btn-block" onSubmit={handleSearch}>Search</button>
+                                    <Form.Control
+                                        style={{ width: '350px', height: '50px', borderRadius: '10px' }}
+                                        value={search}
+                                        onChange={(e) => setSearch(e.target.value)}
+                                        placeholder="Enter blog title to search"
+                                    />
+                                    <Button style={{ marginTop: '8px' }} type="submit" className="btn btn-primary">
+                                        Search
+                                    </Button>
                                 </Form>
                             </div>
                             <div>
@@ -94,10 +121,12 @@ const Blog = () => {
                                 {
                                     category.map((c) => (
                                         <div key={c.id}>
-                                            <Link to={"/blog/category/" + c.id}>{c.name}</Link>
+                                            <input type='radio' name='filter' value={c.id} onChange={e => setFilter(e.target.value)} /> {c.name} <br />
                                         </div>
                                     ))
                                 }
+                                <input type='radio' name='filter' value={0} onChange={e => setFilter(e.target.value)} /> All <br />
+
                             </div>
                         </Col>
                     </Row>

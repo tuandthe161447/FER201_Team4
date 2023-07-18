@@ -1,6 +1,8 @@
 .comment{
     position: relative;
     width: auto;
+    margin-left: 25px;
+    margin-top: 20px;
     margin-bottom: 20px;
     min-width: 300px;
     cursor: pointer;
@@ -27,4 +29,15 @@
     object-fit: cover;
     border-radius: 50px;
     margin-left: 30px;
+}
+
+.commentSection {
+    position: relative;
+    width: auto;
+    min-height: 150px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .35s ease;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 #2C3E50, 0 4px 12px 0 #4CA1AF;
 }

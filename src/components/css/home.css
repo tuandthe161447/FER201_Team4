@@ -1,6 +1,7 @@
-.box{
+.home{
     position: relative;
-    width: 250px;
+    width: 600px;
+    min-height: 150px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: all .35s ease;
@@ -9,10 +10,10 @@
 }
 
 
-.box img{
+.home img{
     margin: 9px;
-    width: 230px; 
-    height: 180px; 
+    width: 560px; 
+    height: 460px; 
     object-fit: cover;
     border-radius: 5px;
 }

@@ -99,7 +99,7 @@ export default function Create() {
                                     <select value={cid} onChange={(e) => setCatergory(parseInt(e.target.value))} className="form-control">
                                         
                                         <option value='1'>Travelling Guide</option>
-                                        <option value='2'>Travelling Spots</option>
+                                        <option value='2'>Travelling Tips</option>
                                         <option value='3'>Top List</option>
                                     </select>
                                 </Form.Group>
