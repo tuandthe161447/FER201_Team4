@@ -22,8 +22,10 @@ function App() {
     <>
       <Header />
       <BrowserRouter>
+
         <Routes>
-          <Route path='/posts' element={<Posts/>} />
+
+          <Route path='/posts' element={<Posts />} />
           <Route path='/' element={<Home />} />
           <Route path='/usermanager' element={<Usermanager />} />
           <Route path='/postmanager' element={<PostManager />} />
@@ -31,13 +33,13 @@ function App() {
           <Route path='/post/detail/:pid' element={<PostDetail />} />
           <Route path='/edit/:code' element={<EditPost />} />
           <Route path='/user/:code' element={<UserDetail />} />
-          <Route path='/login' element={<Login/>} />
-          <Route path='/Sign_up' element={<Sign_up/>} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/Sign_up' element={<Sign_up />} />
 
         </Routes>
       </BrowserRouter>
-      <div className='' style={{marginTop: '100px'}}><Footer /></div>
-      
+      <div className='' style={{ marginTop: '100px' }}><Footer /></div>
+
     </>
   );
 }

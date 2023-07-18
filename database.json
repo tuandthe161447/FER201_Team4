@@ -63,6 +63,13 @@
       "email": "tuan7ad@gmail.com",
       "passWord": "123456789",
       "rId": false
+    },
+    {
+      "id": 14,
+      "uName": "tuando",
+      "email": "tuando7ad@gmail.com",
+      "passWord": "12345678",
+      "rId": false
     }
   ],
   "category_post": [

@@ -64,7 +64,9 @@ const Header = () => {
                                             }
                                         </NavDropdown.Item>
                                     </NavDropdown>
-                                </Nav> : <Nav>
+                                </Nav> 
+                                : 
+                                <Nav>
                                     <Nav.Link href="/login">Login</Nav.Link>
                                     <Nav.Link href="/sign_up">Sign up</Nav.Link>
 

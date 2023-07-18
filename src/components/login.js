@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from "./header";
+
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -51,6 +51,7 @@ const Login = () => {
                             sessionStorage.setItem('userrole', resp.rId);
                             sessionStorage.setItem('uName',resp.uName)
                             navigate('/')
+                            window.location.reload();
                         } else {
                             setPassWord('')
                             toast.error('Please Enter valid credentials');
@@ -61,6 +62,7 @@ const Login = () => {
                 });
             }
         }
+        
     }
 
     
@@ -84,7 +86,7 @@ const Login = () => {
         <div className="background_login d-flex justify-content-center align-items-center " >
             <ToastContainer />
 
-            <Header />
+           
             <form style={{ backgroundColor: 'white', marginTop: '100px', padding: '80px', borderRadius: '20px' }} onSubmit={ProceedLogin }>
                 <h1 style={{ textAlign: 'center', paddingBottom: '30px', textTransform: 'uppercase' }}>
                     Login
