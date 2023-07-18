@@ -49,7 +49,9 @@ const Login = () => {
                             toast.success('Success');
                             sessionStorage.setItem('email', email);
                             sessionStorage.setItem('userrole', resp.rId);
-                            sessionStorage.setItem('uName',resp.uName)
+                            sessionStorage.setItem('uName',resp.uName);
+                            sessionStorage.setItem('uid',resp.id)
+
                             navigate('/')
                             window.location.reload();
                         } else {

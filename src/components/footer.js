@@ -13,11 +13,11 @@ function Footer() {
                     </div>
 
                     <div >
-                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i class="fa-brands fa-facebook"></i></a>
-                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i class="fa-brands fa-twitch"></i></a>
-                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i class="fa-brands fa-google"></i></a>
-                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i class="fa-brands fa-instagram"></i></a>
-                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i class="fa-brands fa-github"></i></a>
+                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i className="fa-brands fa-facebook"></i></a>
+                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i className="fa-brands fa-twitch"></i></a>
+                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i className="fa-brands fa-google"></i></a>
+                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i className="fa-brands fa-instagram"></i></a>
+                        <a href='#' style={{ margin: '10px' }} className='text-white me-4'><i className="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>

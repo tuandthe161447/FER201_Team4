@@ -30,7 +30,7 @@ function App() {
           <Route path='/usermanager' element={<Usermanager />} />
           <Route path='/postmanager' element={<PostManager />} />
           <Route path='/create' element={<Create />} />
-          <Route path='/blog/detail/:pid' element={<BlogDetail />} />
+          <Route path='/blog/detail/:bid' element={<BlogDetail />} />
           <Route path='/edit/:code' element={<EditPost />} />
           <Route path='/user/:code' element={<UserDetail />} />
           <Route path='/login' element={<Login />} />
