@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import '../css/post_detail.css'
 import parse from 'html-react-parser';
 
-const PostDetail = () => {
+const BlogDetail = () => {
 
     const { pid } = useParams();
     const [p, setPosts] = useState([]);
@@ -14,7 +14,7 @@ const PostDetail = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:9999/post/' + pid)
+        fetch('http://localhost:9999/blog/' + pid)
             .then(resp => resp.json())
             .then(data => {
                 setPosts(data);
@@ -37,7 +37,7 @@ const PostDetail = () => {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:9999/comment')
+        fetch('http://localhost:9999/feedback')
             .then(resp => resp.json())
             .then(data => {
                 setComment(data.filter(s => s.pid == pid));
@@ -93,4 +93,4 @@ const PostDetail = () => {
 
 }
 
-export default PostDetail;
+export default BlogDetail;

@@ -10,7 +10,7 @@ const Home = () => {
     const [category, setCategory] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:9999/post").then((res) => res.json())
+        fetch("http://localhost:9999/blog").then((res) => res.json())
             .then((data) => {
                 let Latest = [];
                 Latest = data.slice(0, 3);
@@ -21,7 +21,7 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:9999/category_post")
+        fetch("http://localhost:9999/category_blog")
             .then((res) => res.json())
             .then((data) => {
                 setCategory(data)
@@ -39,12 +39,12 @@ const Home = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1 className='text-center pt-5 pb-3'>Latest Posts</h1>
+                            <h1 className='text-center pt-5 pb-3'>Trending Blog</h1>
                             <Row>
                                 {
                                     posts.map(p => (
                                         <Col xs={4}>
-                                            <Link to={'/post/detail/'+p.id}>
+                                            <Link to={'/blog/detail/'+p.id}>
                                                 <div className='box pt-3'>
                                                     <img src={p.img} alt="#" />
                                                     <h2>{p.name}</h2>
@@ -58,7 +58,7 @@ const Home = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <h1 className='text-center pt-5 pb-3'>Trending Blog</h1>
+                            <h1 className='text-center pt-5 pb-3'>Latest Post</h1>
                             <Row>
                                 {
                                     posts.map(p => (
