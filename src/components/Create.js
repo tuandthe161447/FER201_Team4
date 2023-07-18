@@ -19,19 +19,27 @@ export default function Create() {
 
     const handlesubmit = (e) => {
         e.preventDefault()
+        if (name === '' || created_date === '' || img === '' || content === '' || !validURL(img)){
+            alert('invalid post')
+            return
+        }
+
         const postobj = { name, created_date, content, cid, img }
-        console.log(postobj)
 
         fetch('http://localhost:9999/blog', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(postobj)
         }).then(resp => {
-            alert('wat')
+            alert('post added')
             navigate('/postmanager')
         }).catch((err) => {
             console.log(err.message)
         })
+    }
+
+    const validURL = (url) => {
+        return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
     }
 
     const [editorState, setEditorState] = useState(EditorState.createEmpty());

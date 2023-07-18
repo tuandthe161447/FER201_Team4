@@ -15,3 +15,9 @@
   background-size: cover;
   height: 1500px;
 }
+
+.message-editor{
+  background-color:lightgray;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
