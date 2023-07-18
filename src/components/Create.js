@@ -11,7 +11,7 @@ export default function Create() {
     const [name, setTitle] = useState('')
     const [created_date, setDate] = useState('')
     const [cid, setCatergory] = useState(1)
-
+    const [img, setImg] = useState('')
     const navigate = useNavigate()
 
     
@@ -19,19 +19,27 @@ export default function Create() {
 
     const handlesubmit = (e) => {
         e.preventDefault()
-        const postobj = { name, created_date, content, cid }
-        console.log(postobj)
+        if (name === '' || created_date === '' || img === '' || content === '' || !validURL(img)){
+            alert('invalid post')
+            return
+        }
 
-        fetch('http://localhost:9999/post', {
+        const postobj = { name, created_date, content, cid, img }
+
+        fetch('http://localhost:9999/blog', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(postobj)
         }).then(resp => {
-            alert('wat')
+            alert('post added')
             navigate('/postmanager')
         }).catch((err) => {
             console.log(err.message)
         })
+    }
+
+    const validURL = (url) => {
+        return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
     }
 
     const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -72,6 +80,10 @@ export default function Create() {
                                         value={content}
                                         style={{ width: '100%' }}
                                     />
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Thumbnail image</Form.Label>
+                                    <Form.Control value={img} onChange={(e) => setImg(e.target.value)}></Form.Control>
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Title</Form.Label>

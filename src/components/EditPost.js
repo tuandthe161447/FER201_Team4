@@ -3,29 +3,54 @@ import { ContentState, EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import draftToHtml from "draftjs-to-html";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { Button, Card, Col, Container, Form, FormGroup, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Form, FormGroup, Row, Table } from "react-bootstrap";
 import {  useNavigate, useParams } from "react-router-dom";
 import htmlToDraft, {} from 'html-to-draftjs'
 
 
 const EditPost = () => {
+    const [comment, setComment] = useState([])
     const [name, setTitle] = useState('')
     const [created_date, setDate] = useState('')
     const [id, setId] = useState(0)
     const [cid, setCatergory] = useState(0)
+    const [img, setImg] = useState('')
     const {code} = useParams();
+    const [user , setUser] = useState([])
 
     const navigate = useNavigate()
 
     useEffect(() => {
-        console.log(code);
-        fetch('http://localhost:9999/post/'+code).then(resp => { return resp.json();
+        fetch('http://localhost:9999/blog/'+code).then(resp => { return resp.json();
         }).then(resp => {
             setId(resp.id);
             setTitle(resp.name);
             setDate(resp.created_date);
             setEditorState(htmlToDraftBlocks(resp.content));
             setCatergory(resp.cid)
+            setImg(resp.img)
+        }).catch((err) => {
+            console.log(err.message)
+        })
+    },[])
+
+
+    useEffect(() => {
+        fetch('http://localhost:9999/feedback').then(resp => {
+            return resp.json();
+        }).then(resp => {
+            setComment(resp.filter((r) => r.pid == code))
+        }).catch((err) => {
+            console.log(err.message)
+        })
+    },[])
+
+
+    useEffect(() => {
+        fetch('http://localhost:9999/users').then(resp => {
+            return resp.json();
+        }).then(resp => {
+            setUser(resp)
         }).catch((err) => {
             console.log(err.message)
         })
@@ -42,19 +67,28 @@ const EditPost = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault()
+        if (name === '' || created_date === '' || img === '' || content === '' || !validURL(img)){
+            alert('invalid post')
+            return
+        }
         const postobj = { name, created_date, content, cid }
         console.log(postobj)
 
-        fetch('http://localhost:9999/post/' + id, {
+        fetch('http://localhost:9999/blog/' + id, {
             method: "PUT",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(postobj)
         }).then(resp => {
-            alert('wattttt')
+            alert('post saved')
             navigate('/postmanager')
         }).catch((err) => {
             console.log(err.message)
         })
+    }
+
+
+    const validURL = (url) => {
+        return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
     }
 
     const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -72,6 +106,18 @@ const EditPost = () => {
             options: ["bold", "italic", "underline", "strikethrough"],
         },
     };
+
+    const handerRemove = (cID) => {
+        if (window.confirm('u sure bro ?')) {
+            fetch('http://localhost:9999/feedback/' + cID, {
+                method: "DELETE"
+            }).then((resp) => {
+                window.location.reload()
+            }).catch((err) => {
+                console.log(err.message)
+            })
+        }
+    }
 
     return (
         <div>
@@ -101,6 +147,10 @@ const EditPost = () => {
                                     <Form.Control disabled value={id} onChange={(e) => setId(e.target.value)}></Form.Control>
                                 </Form.Group>
                                 <Form.Group>
+                                    <Form.Label>Thumbnail image</Form.Label>
+                                    <Form.Control value={img} onChange={(e) => setImg(e.target.value)}></Form.Control>
+                                </Form.Group>
+                                <Form.Group>
                                     <Form.Label>Title</Form.Label>
                                     <Form.Control value={name} onChange={(e) => setTitle(e.target.value)}></Form.Control>
                                 </Form.Group>
@@ -124,6 +174,43 @@ const EditPost = () => {
                                 <Button variant="success" type="submit">Save</Button>
                             </Card.Footer>
                         </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>  
+                        <h2>Comment</h2>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>  
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <td>id</td>
+                                    <td>user</td>
+                                    <td>comment</td>
+                                    <td>action</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    comment.map((m) => (
+                                        <tr key={m.id}>
+                                            <td>{m.id}</td>
+                                            <td>{
+                                                
+                                                user.map((u) => u.id === m.uid ? u.uName : '')
+                                                
+                                            }</td>
+                                            <td>{m.comment}</td>
+                                            <td>
+                                                <button className="btn btn-danger" onClick={() => { handerRemove(m.id) }}>Delete</button>   
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </Table>
                     </Col>
                 </Row>
             </form>

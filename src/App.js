@@ -7,7 +7,6 @@ import Footer from './components/footer';
 import Login from './components/login';
 import Sign_up from './components/sign_up';
 import Blog from './components/Blog';
-import Category from './components/category';
 import Home from './components/home';
 import PostManager from './components/PostManager';
 import Create from './components/Create';
@@ -38,7 +37,6 @@ function App() {
           <Route path='/user/:code' element={<UserDetail />} />
           <Route path='/login' element={<Login />} />
           <Route path='/Sign_up' element={<Sign_up />} />
-
         </Routes>
       </BrowserRouter>
       <div className='' style={{ marginTop: '100px' }}><Footer /></div>

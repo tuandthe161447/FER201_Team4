@@ -11,7 +11,7 @@ function PostManager() {
 
     const handerRemove = (code) => {
         if (window.confirm('u sure bro ?')) {
-            fetch('http://localhost:9999/post/' + code, {
+            fetch('http://localhost:9999/blog/' + code, {
                 method: "DELETE"
             }).then((resp) => {
                 window.location.reload()
@@ -22,7 +22,7 @@ function PostManager() {
     }
 
     useEffect(() => {
-        fetch('http://localhost:9999/post')
+        fetch('http://localhost:9999/blog')
             .then((resp) => {
                 return resp.json()
             }).then((data) => {
@@ -34,7 +34,7 @@ function PostManager() {
 
 
     useEffect(() => {
-        fetch('http://localhost:9999/category_post')
+        fetch('http://localhost:9999/category_blog')
             .then((resp) => {
                 return resp.json()
             }).then((data) => {
