@@ -10,7 +10,7 @@ const Home = () => {
     const [category, setCategory] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:9999/post").then((res) => res.json())
+        fetch("http://localhost:9999/blog").then((res) => res.json())
             .then((data) => {
                 let Latest = [];
                 Latest = data.slice(0, 3);
@@ -21,7 +21,7 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:9999/category_post")
+        fetch("http://localhost:9999/category_blog")
             .then((res) => res.json())
             .then((data) => {
                 setCategory(data)
