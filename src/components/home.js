@@ -6,6 +6,7 @@ import '../components/css/home.css'
 
 
 const Home = () => {
+    const [blog, setBlog] = useState([]);
     const [posts, setPosts] = useState([]);
     const [category, setCategory] = useState([]);
 
@@ -14,7 +15,7 @@ const Home = () => {
             .then((data) => {
                 let Latest = [];
                 Latest = data.slice(0, 3);
-                setPosts(Latest)
+                setBlog(Latest)
             }).catch(err => {
                 console.log(err.message)
             })
@@ -25,6 +26,17 @@ const Home = () => {
             .then((res) => res.json())
             .then((data) => {
                 setCategory(data)
+            }).catch(err => {
+                console.log(err.message)
+            })
+    }, [])
+
+    useEffect(() => {
+        fetch("http://localhost:9999/post").then((res) => res.json())
+            .then((data) => {
+                let Latest = [];
+                Latest = data.slice(0, 3);
+                setPosts(Latest)
             }).catch(err => {
                 console.log(err.message)
             })
@@ -42,12 +54,12 @@ const Home = () => {
                             <h1 className='text-center pt-5 pb-3'>Trending Blog</h1>
                             <Row>
                                 {
-                                    posts.map(p => (
+                                    blog.map(p => (
                                         <Col xs={4}>
-                                            <Link to={'/blog/detail/'+p.id}>
+                                            <Link to={'/blog/detail/' + p.id}>
                                                 <div className='box pt-3'>
                                                     <img src={p.img} alt="#" />
-                                                    <h2>{p.name}</h2>
+                                                    <h2 style={{ color: 'black' }}>{p.name}</h2>
                                                 </div>
                                             </Link>
                                         </Col>
@@ -63,10 +75,17 @@ const Home = () => {
                                 {
                                     posts.map(p => (
                                         <Col xs={4}>
-                                            <div className='box pt-3'>
-                                                <img src={p.img} alt="#" />
-                                                <h2>{p.name}</h2>
-                                            </div>
+                                            <Link to={'/post/detail/' + p.id}>
+                                                <div className='box pt-3'>
+                                                    <h2 className='pl-2'>{p.title}</h2>
+                                                    <h4 className="pl-2" style={{ color: 'grey' }}>
+                                                        {
+                                                            category.map(c => c.id == p.cid ? c.name : '')
+                                                        }
+                                                    </h4>
+                                                </div>
+                                            </Link>
+
                                         </Col>
                                     ))
                                 }

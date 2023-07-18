@@ -5,7 +5,7 @@ import Sidebar from "./blog/sidebar";
 
 
 
-const Posts = () => {
+const Blog = () => {
     const [posts, setPosts] = useState([]);
     const [category, setCategory] = useState([]);
     const [search, setSearch] = useState("");
@@ -39,7 +39,7 @@ const Posts = () => {
 
                     <Row>
                         <Col xs={12}>
-                            <h1 className="text-center mb-5">Post List</h1>
+                            <h1 className="text-center mb-5">Blog List</h1>
                         </Col>
                     </Row>
                     {/* <Row>
@@ -84,4 +84,4 @@ const Posts = () => {
     );
 }
 
-export default Posts;
+export default Blog;

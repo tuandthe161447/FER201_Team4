@@ -205,5 +205,96 @@
       "pid": 1,
       "comment": "my name is not jeff"
     }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "cid": 1,
+      "title": "Anyone knows how to make fire ?"
+    },
+    {
+      "id": 2,
+      "cid": 1,
+      "title": "Have anyone encounter bears ?"
+    },
+    {
+      "id": 3,
+      "cid": 3,
+      "title": "she doesnt love me back, should i kill her?"
+    },
+    {
+      "id": 4,
+      "cid": 3,
+      "title": "what is love?"
+    },
+    {
+      "id": 5,
+      "cid": 4,
+      "title": "Are cats slowly taking over the world?"
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "uid": 2,
+      "pid": 1,
+      "comment": "no, just use a lighter"
+    },
+    {
+      "id": 2,
+      "uid": 4,
+      "pid": 1,
+      "comment": "what is fire???"
+    },
+    {
+      "id": 3,
+      "uid": 2,
+      "pid": 1,
+      "comment": "if you rub ur cock fast enough, you will produce enough heat energy to light up any source of things"
+    }
+  ],
+  "reply": [
+    {
+      "id": 1,
+      "uid": 2,
+      "cid": 2,
+      "comment": "fuk u"
+    },
+    {
+      "id": 2,
+      "uid": 4,
+      "cid": 1,
+      "comment": "u suck, no help at all"
+    },
+    {
+      "id": 3,
+      "uid": 4,
+      "cid": 1,
+      "comment": "come home and do something useful madafuk"
+    },
+    {
+      "id": 6,
+      "uid": 4,
+      "cid": 2,
+      "comment": "fuk u too"
+    }
+  ],
+  "category_post": [
+    {
+      "id": 1,
+      "name": "Du lịch"
+    },
+    {
+      "id": 2,
+      "name": "Học Tập"
+    },
+    {
+      "id": 3,
+      "name": "Tình Yêu"
+    },
+    {
+      "id": 4,
+      "name": "Chính trị"
+    }
   ]
 }
