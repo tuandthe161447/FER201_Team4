@@ -11,6 +11,7 @@ export default function Create() {
     const [name, setTitle] = useState('')
     const [created_date, setDate] = useState('')
     const [cid, setCatergory] = useState(1)
+    const [img, setImg] = useState('')
 
     const navigate = useNavigate()
 
@@ -19,7 +20,7 @@ export default function Create() {
 
     const handlesubmit = (e) => {
         e.preventDefault()
-        const postobj = { name, created_date, content, cid }
+        const postobj = { name, created_date, content, cid, img }
         console.log(postobj)
 
         fetch('http://localhost:9999/post', {
@@ -72,6 +73,10 @@ export default function Create() {
                                         value={content}
                                         style={{ width: '100%' }}
                                     />
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Thumbnail image</Form.Label>
+                                    <Form.Control value={img} onChange={(e) => setImg(e.target.value)}></Form.Control>
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Title</Form.Label>
