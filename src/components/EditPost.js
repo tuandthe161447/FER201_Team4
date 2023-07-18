@@ -13,6 +13,7 @@ const EditPost = () => {
     const [created_date, setDate] = useState('')
     const [id, setId] = useState(0)
     const [cid, setCatergory] = useState(0)
+    const [img, setImg] = useState('')
     const {code} = useParams();
 
     const navigate = useNavigate()
@@ -26,6 +27,7 @@ const EditPost = () => {
             setDate(resp.created_date);
             setEditorState(htmlToDraftBlocks(resp.content));
             setCatergory(resp.cid)
+            setImg(resp.img)
         }).catch((err) => {
             console.log(err.message)
         })
@@ -99,6 +101,10 @@ const EditPost = () => {
                                 <Form.Group>
                                     <Form.Label>ID</Form.Label>
                                     <Form.Control disabled value={id} onChange={(e) => setId(e.target.value)}></Form.Control>
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Thumbnail image</Form.Label>
+                                    <Form.Control value={img} onChange={(e) => setImg(e.target.value)}></Form.Control>
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Title</Form.Label>
