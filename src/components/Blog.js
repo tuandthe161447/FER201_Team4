@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Sidebar from "./post/sidebar";
-import { Col, Container, Row} from "react-bootstrap";
+import Sidebar from "./blog/sidebar";
 
 
 
@@ -15,7 +14,7 @@ const Posts = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:9999/post").then((res) => res.json())
+        fetch("http://localhost:9999/blog").then((res) => res.json())
             .then((data) => {
                 setPosts(data)
             }).catch(err => {
@@ -23,8 +22,9 @@ const Posts = () => {
             })
     }, [])
 
+    
     useEffect(() => {
-        fetch("http://localhost:9999/category_post")
+        fetch("http://localhost:9999/category_blog")
             .then((res) => res.json())
             .then((data) => {
                 setCategory(data)
@@ -60,10 +60,10 @@ const Posts = () => {
                                 posts.map((p) => (
                                     <Row className="mb-3" key={p.id}>
                                         <Col xs={3}>
-                                            <img src={p.img} alt="#" width={150} height={150} />
+                                            <Link to={"/blog/detail/" + p.id}><img src={p.img} alt="#" width={150} height={150} /></Link>
                                         </Col>
                                         <Col xs={9}>
-                                            <h2>{p.name}</h2>
+                                            <Link to={"/blog/detail/" + p.id} className="blog">{p.name}</Link>
                                             <Row>
                                                 <Col xs={6}>
                                                     <div>Category: {category.map(c => c.id === p.cid ? c.name : '')}</div>
@@ -84,63 +84,6 @@ const Posts = () => {
                 </Col>
             </Row>
         </Container >
-
-
-
-    return (
-        <Container className="mt-5">
-            <Row>
-                <Col xs={12}>
-                    <h1 className="text-center mb-5">Post List</h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col xs={9}>
-                    {
-                        posts.map((p) => (
-                            <Row className="mb-3" key={p.id}>
-                                <Col xs={3}>
-                                    <img src={p.img} alt="#" width={150} height={150} />
-                                </Col>
-                                <Col xs={9} className="m-0">
-                                    <h2>{p.name}</h2>
-                                    <Row>
-                                        <Col xs={6}>
-                                            <div>{category.map(c => c.id === p.cid ? c.name : '')}</div>
-                                        </Col>
-                                        <Col xs={6}>
-                                            <div className="text-right">{p.created_date}</div>
-                                        </Col>
-                                    </Row>
-                                </Col>
-                            </Row>
-                        ))
-                    }
-                </Col>
-                <Col xs={3}>
-                    <div>
-                        <h3>Search</h3>
-                        <input type="text" placeholder="Search any post.." />
-                    </div>
-                    <div>
-                        <h3>Filter by user</h3>
-                    </div>
-                    <div>
-                        <h3>Filter by category</h3>
-                        {
-                            category.map((c) => (
-                                <div key={c.id}>
-                                    <input type="checkbox"/>
-                                    {c.name}
-                                </div>
-                            ))
-                        }
-                    </div>
-                </Col>
-            </Row>
-
-        </Container>
-
     );
 }
 

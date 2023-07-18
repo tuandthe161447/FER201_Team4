@@ -64,7 +64,7 @@
       "rId": false
     }
   ],
-  "category_post": [
+  "category_blog": [
     {
       "id": 1,
       "name": "Travelling Guide"
@@ -78,10 +78,12 @@
       "name": "Top List"
     }
   ],
-  "post": [
+  "blog": [
     {
       "id": 1,
       "name": "Npath",
+      "cid":1,
+      "img": "http://dummyimage.com/172x221.png/5fa2dd/ffffff",
       "created_date": "4/20/2023",
       "content": "<p>Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.<br><del><br>Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nis</del>i.dfdfdfgfghfghfgh</p>\n"
     },

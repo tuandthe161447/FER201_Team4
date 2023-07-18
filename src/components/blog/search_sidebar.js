@@ -8,7 +8,6 @@ const inputSearch = useRef(null);
     const handleSearch = (e) => {
         e.preventDefault()
         console.log(inputSearch.current.value)
-        
     }
 
     return (
