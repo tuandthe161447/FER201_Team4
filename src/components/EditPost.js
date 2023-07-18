@@ -3,23 +3,24 @@ import { ContentState, EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import draftToHtml from "draftjs-to-html";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { Button, Card, Col, Container, Form, FormGroup, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Form, FormGroup, Row, Table } from "react-bootstrap";
 import {  useNavigate, useParams } from "react-router-dom";
 import htmlToDraft, {} from 'html-to-draftjs'
 
 
 const EditPost = () => {
+    const [comment, setComment] = useState([])
     const [name, setTitle] = useState('')
     const [created_date, setDate] = useState('')
     const [id, setId] = useState(0)
     const [cid, setCatergory] = useState(0)
     const [img, setImg] = useState('')
     const {code} = useParams();
+    const [user , setUser] = useState([])
 
     const navigate = useNavigate()
 
     useEffect(() => {
-        console.log(code);
         fetch('http://localhost:9999/blog/'+code).then(resp => { return resp.json();
         }).then(resp => {
             setId(resp.id);
@@ -28,6 +29,28 @@ const EditPost = () => {
             setEditorState(htmlToDraftBlocks(resp.content));
             setCatergory(resp.cid)
             setImg(resp.img)
+        }).catch((err) => {
+            console.log(err.message)
+        })
+    },[])
+
+
+    useEffect(() => {
+        fetch('http://localhost:9999/feedback').then(resp => {
+            return resp.json();
+        }).then(resp => {
+            setComment(resp.filter((r) => r.pid == code))
+        }).catch((err) => {
+            console.log(err.message)
+        })
+    },[])
+
+
+    useEffect(() => {
+        fetch('http://localhost:9999/users').then(resp => {
+            return resp.json();
+        }).then(resp => {
+            setUser(resp)
         }).catch((err) => {
             console.log(err.message)
         })
@@ -84,6 +107,18 @@ const EditPost = () => {
         },
     };
 
+    const handerRemove = (cID) => {
+        if (window.confirm('u sure bro ?')) {
+            fetch('http://localhost:9999/feedback/' + cID, {
+                method: "DELETE"
+            }).then((resp) => {
+                window.location.reload()
+            }).catch((err) => {
+                console.log(err.message)
+            })
+        }
+    }
+
     return (
         <div>
             <form className="container-fluid" onSubmit={handlesubmit}>
@@ -139,6 +174,43 @@ const EditPost = () => {
                                 <Button variant="success" type="submit">Save</Button>
                             </Card.Footer>
                         </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>  
+                        <h2>Comment</h2>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>  
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <td>id</td>
+                                    <td>user</td>
+                                    <td>comment</td>
+                                    <td>action</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    comment.map((m) => (
+                                        <tr key={m.id}>
+                                            <td>{m.id}</td>
+                                            <td>{
+                                                
+                                                user.map((u) => u.id === m.uid ? u.uName : '')
+                                                
+                                            }</td>
+                                            <td>{m.comment}</td>
+                                            <td>
+                                                <button className="btn btn-danger" onClick={() => { handerRemove(m.id) }}>Delete</button>   
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </Table>
                     </Col>
                 </Row>
             </form>
