@@ -1,66 +1,74 @@
 {
   "users": [
+    {},
+    {
+      "id": 2,
+      "uName": "Admin",
+      "email": "admin@gmail.com",
+      "passWord": "1",
+      "rId": true
+    },
+    {
+      "uName": "ascasc",
+      "email": "email1@gmail.com",
+      "passWord": "123456781",
+      "rId": false,
+      "id": 4
+    },
     {
       "uName": "asacasccascas",
-      "email": "nbacsascakcj@gmail.com",
+      "email": "tuan7ad@gmail.com",
       "passWord": "ccascascas",
       "rId": false,
-      "id": 3
-    },
-    {
-      "id": 4,
-      "uName": "cascas",
-      "email": "nbacsascakcj@gmail.com",
-      "passWord": "ccascascas",
-      "rId": false
-    },
-    {
-      "id": 5,
-      "uName": "cascas",
-      "email": "nbacsascakcj@gmail.com",
-      "passWord": "ccascascas",
-      "rId": false
+      "id": 5
     },
     {
       "id": 6,
       "uName": "cascas",
-      "email": "nbacsascakcj@gmail.com",
+      "email": "admin2@gmail.com",
       "passWord": "ccascascas",
       "rId": false
     },
     {
       "id": 7,
       "uName": "cascas",
-      "email": "nbacsascakcj@gmail.com",
+      "email": "admin4@gmail.com",
       "passWord": "ccascascas",
       "rId": false
     },
     {
       "id": 8,
-      "uName": "",
-      "email": "nbacsascakcj@gmail.com",
-      "passWord": "123456789",
-      "rId": false
-    },
-    {
-      "id": 9,
-      "uName": "",
-      "email": "nbacsascakcj@gmail.com",
+      "uName": "cascas",
+      "email": "admin5@gmail.com",
       "passWord": "ccascascas",
       "rId": false
     },
     {
-      "id": 10,
+      "id": 9,
+      "uName": "cascas",
+      "email": "email4@gmail.com",
+      "passWord": "ccascascas",
+      "rId": false
+    },
+    {
+      "id": 12,
       "uName": "dawfaef",
-      "email": "faesfe@gmail.com",
+      "email": "email9@gmail.com",
       "passWord": "11111111",
       "rId": false
     },
     {
-      "id": 11,
+      "id": 13,
       "uName": "ádasdsa",
       "email": "tuan7ad@gmail.com",
       "passWord": "123456789",
+      "rId": false
+    },
+    {
+      "id": 14,
+      "uName": "tuando",
+      "email": "tuando7ad@gmail.com",
+      "passWord": "12345678",
       "rId": false
     }
   ],

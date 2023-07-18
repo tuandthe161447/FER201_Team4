@@ -8,3 +8,10 @@
   width: 100%;
   line-height: 40px;
 }
+
+.background_login{
+  background-image:url(https://img2.thuthuat123.com/uploads/2020/05/12/canh-dep-nui-non-con-duong-cong-tuyet-dep-cho-dan-phuot_112015720.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 1500px;
+}
