@@ -37,6 +37,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="/blog">Blog</Nav.Link>
+                            <Nav.Link href='/post'>Post</Nav.Link>
                             {/* <NavDropdown title="Categories" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -55,9 +56,22 @@ const Header = () => {
                                         <NavDropdown.Item href="/login" >
                                             {
                                                 userrole == true ? <Nav>
-                                                    <Nav.Link href='/post'style={{color:'black'}}>
-                                                        Manage
+                                                    <Nav.Link href='/postmanager'style={{color:'black'}}>
+                                                        Post Manage
                                                     </Nav.Link>
+                                                    
+                                                </Nav>
+                                                    :
+                                                    <></>
+                                            }
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="/login" >
+                                            {
+                                                userrole == true ? <Nav>
+                                                    <Nav.Link href='/usermanager'style={{color:'black'}}>
+                                                        User Manage
+                                                    </Nav.Link>
+                                                    
                                                 </Nav>
                                                     :
                                                     <></>

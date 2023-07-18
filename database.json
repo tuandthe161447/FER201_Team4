@@ -1,66 +1,37 @@
 {
   "users": [
-    {},
     {
-      "id": 2,
+      "id": 1,
       "uName": "Admin",
       "email": "admin@gmail.com",
       "passWord": "1",
       "rId": true
     },
     {
-      "uName": "ascasc",
-      "email": "email1@gmail.com",
-      "passWord": "123456781",
-      "rId": false,
-      "id": 4
-    },
-    {
-      "uName": "asacasccascas",
-      "email": "tuan7ad@gmail.com",
-      "passWord": "ccascascas",
-      "rId": false,
-      "id": 5
-    },
-    {
-      "id": 6,
-      "uName": "cascas",
-      "email": "admin2@gmail.com",
-      "passWord": "ccascascas",
+      "id": 2,
+      "uName": "MeoBeo",
+      "email": "meobeo@gmail.com",
+      "passWord": "12345678",
       "rId": false
     },
     {
-      "id": 7,
-      "uName": "cascas",
-      "email": "admin4@gmail.com",
-      "passWord": "ccascascas",
+      "id": 3,
+      "uName": "PussySlayer69",
+      "email": "provip123@gmail.com",
+      "passWord": "12345678",
       "rId": false
     },
     {
-      "id": 9,
-      "uName": "cascas",
-      "email": "email4@gmail.com",
-      "passWord": "ccascascas",
+      "id": 4,
+      "uName": "ĐàmnDaddy",
+      "email": "damn@gmail.com",
+      "passWord": "12345678",
       "rId": false
     },
     {
-      "id": 12,
-      "uName": "dawfaef",
-      "email": "email9@gmail.com",
-      "passWord": "11111111",
-      "rId": false
-    },
-    {
-      "id": 13,
-      "uName": "ádasdsa",
-      "email": "tuan7ad@gmail.com",
-      "passWord": "123456789",
-      "rId": false
-    },
-    {
-      "id": 14,
-      "uName": "tuando",
-      "email": "tuando7ad@gmail.com",
+      "id": 5,
+      "uName": "XD Kekw",
+      "email": "kekw@gmail.com",
       "passWord": "12345678",
       "rId": false
     }
@@ -82,11 +53,11 @@
   "blog": [
     {
       "id": 1,
-      "name": "Những mẹo nhỏ khi đi du lịch không phải ai cũng biết",
-      "cid": 2,
-      "img": "https://www.vietnambooking.com/wp-content/uploads/2016/01/cam-nang-du-lich-tron-ven-1-5-1-2016.jpg",
-      "content": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-      "created_date": "4/20/2023"
+      "name": "Kinh nghiệm du lịch Côn Đảo 2023 từ A đến Z",
+      "cid": 1,
+      "img": "https://vcdn1-dulich.vnecdn.net/2022/03/31/dulichcondao-1648708481-164870-9979-1818-1648708511.jpg?w=900&h=540&q=100&dpr=1&fit=crop&s=M1gGICwLnjCEKHgL2t_Z4A",
+      "content": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+      "created_date": "6/7/2023"
     },
     {
       "id": 2,
@@ -153,12 +124,12 @@
       "created_date": "6/14/2023"
     },
     {
-      "id": 10,
-      "name": "Kinh nghiệm du lịch Côn Đảo 2023 từ A đến Z",
-      "cid": 1,
-      "img": "https://vcdn1-dulich.vnecdn.net/2022/03/31/dulichcondao-1648708481-164870-9979-1818-1648708511.jpg?w=900&h=540&q=100&dpr=1&fit=crop&s=M1gGICwLnjCEKHgL2t_Z4A",
-      "content": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-      "created_date": "6/7/2023"
+      "name": "Những mẹo nhỏ khi đi du lịch không phải ai cũng biết",
+      "created_date": "2023-04-22",
+      "img": "https://www.vietnambooking.com/wp-content/uploads/2016/01/cam-nang-du-lich-tron-ven-1-5-1-2016.jpg",
+      "content": "<p>Trước những chuyến đi bạn cần lên kế hoạch và chuẩn bị rất nhiều thứ để có được một hành trình trọn vẹn. Ngoài việc tìm hiểu về điểm đến, đặt mua vé máy bay, đặt phòng khách sạn, chọn địa điểm ăn uống, bạn sẽ có thêm rất nhiều điều khác phải lo toan trong chuyến đi của mình.</p>\n<p>Có rất nhiều mẹo nhỏ để giúp bạn có được một chuyến đi đáng nhớ và thú vị. Tuy nhiên không hẳn du khách nào cũng biết được những mẹo nhỏ này. Vì vậy bạn nên tham khảo những mẹo nhỏ dưới đây để có thêm kinh nghiệm cho chuyến du lịch trong nước giá rẻ trong tương lai sắp đến.</p>\n<p>Trong hành trình khám phá luôn có bất ngờ hoặc những trường hợp phát sinh ngoài ý muốn, đó là lý do vì sao bạn nên tìm hiểu trước những mẹo nhỏ trong hành trình du lịch để có được chuyến đi trọn vẹn. Dưới đây là những mẹo nhỏ để chuyến đi của bạn luôn được như ý.</p>\n<p><strong>1. Giảm nôn nao bằng cách lắc nhẹ cơ thể</strong></p>\n<p>Không chỉ riêng với hành khách lần đầu đi máy bay, ngay với cả những người đi nhiều lần cũng khó tránh khỏi cảm giác nôn nao. Để xua đi cảm giác này, bạn chỉ cần lắc nhẹ cơ thể. Chính chuyển động của cơ thể sẽ giúp bạn chống lại tác động của máy bay và giảm đáng kể cảm giác nôn nao, khó chịu.</p>\n<p></p>\n<img src=\"https://www.vietnambooking.com/wp-content/uploads/2016/01/cam-nang-du-lich-tron-ven-2-5-1-2016.jpg\" alt=\"undefined\" style=\"height: auto;width: auto\"/>\n<p><strong>2. Cuộn tròn quần áo trước khi xếp vào vali</strong></p>\n<p>Việc cuộn tròn quần áo sẽ giúp bạn tiết kiệm đáng kể diện tích của chiếc vali. Bạn có thể mang theo nhiều đồ hơn với cách sắp xếp thông minh này.</p>\n<p><strong>3. Không nên mang dép lê khi đi máy bay</strong></p>\n<p>Dép lê là một trong những phụ kiện không thể thiếu cho chuyến du lịch biển. Tuy nhiên bạn nên tránh mang dép lê lên máy bay. Thứ nhất là không đảm bảo thẩm mỹ, lịch sự. Thứ hai chân của bạn sẽ khó tránh khỏi những tổn thương trong trường hợp khẩn cấp.</p>\n<p><strong>4. Lựa chọn nơi đổi tiền tệ</strong></p>\n<p>Trước chuyến đi, bạn nên đổi tiền tệ tại những nơi uy tín. Nếu cần đổi tiền khi đang ở nước ngoài, bạn nên tìm đến những khu chợ, hầu hết những nơi đây đều có các cửa hàng thu đổi ngoại tệ với lãi suất tốt. Tránh lựa chọn khách sạn làm nơi thu đổi tiền tệ.</p>\n<p><strong>5. Đừng quên mang theo chiếc áo khoác có mũ</strong></p>\n<p>Một chiếc áo khoác có mũ sẽ là bạn đồng hành tuyệt vời để bạn có thể tránh nắng, tránh mưa. Bạn cũng có thể giữ ấm đầu khi đi máy bay hoặc che ánh sáng để có thể chợp mắt.</p>\n<p><strong>6. Khách sạn không phải là lựa chọn hàng đầu</strong></p>\n<p>Bạn nghĩ rằng khách sạn là địa điểm nghỉ ngơi luôn được ưu tiên trong hành trình du lịch. Tuy nhiên, với những du khách muốn có được những trải nghiệm mới lạ hoặc muốn có được một chuyến đi tiết kiệm, bạn có thể lựa chọn nhà nghỉ, thuê lều cắm trại, ngủ ở nhà dân,…</p>\n<p><strong>7. Sở hữu một chiếc headphone chống ồn</strong></p>\n<p>Việc tránh đi những tiếng ồn để có giấc ngủ ngon là điều tối quan trọng trong các chuyến đi. Giấc ngủ sẽ giúp bạn nạp lại phần năng lượng đã mất. Nếu bạn là người dị ứng với tiếng ồn thì chiếc headphone chống ồn sẽ là người bạn tuyệt vời nhất. Bạn sẽ không phải nghe thấy tiếng trẻ em khóc, tiếng ngáy hay tiếng ồn ào của động cơ,…</p>\n<p><strong>8. Sử dụng ngôn ngữ cơ thể khi gặp khó khăn trong giao tiếp</strong></p>\n<p>Khi đến một vùng đất xa lạ, người dân cũng không giao tiếp được bằng ngôn ngữ quốc tế thì bạn cũng đừng quá lo lắng. Lúc này hãy bình tĩnh và sử dụng ngôn ngữ cơ thể để diễn tả điều bạn muốn nói. Ngôn ngữ cơ thể sẽ giúp mọi người dễ dàng hiểu được điều bạn muốn diễn đạt. Bạn cũng nên mang theo giấy bút để sử dụng trong trường hợp này. Bạn có thể vẽ ra giấy những điều mình muốn.</p>\n<p></p>\n<img src=\"https://www.vietnambooking.com/wp-content/uploads/2016/01/cam-nang-du-lich-tron-ven-3-5-1-2016.jpg\" alt=\"undefined\" style=\"height: auto;width: auto\"/>\n<p></p>\n<p></p>\n<p></p>\n<p></p>\n",
+      "cid": 2,
+      "id": 1
     }
   ],
   "feedback": [
@@ -166,25 +137,140 @@
       "id": 1,
       "uid": 2,
       "pid": 1,
-      "comment": "i hate this shit"
+      "comment": "Bạn đạo văn hay quá"
     },
     {
       "id": 2,
+      "uid": 3,
+      "pid": 1,
+      "comment": "Như shit tôi ko thích bạn"
+    },
+    {
+      "id": 3,
+      "uid": 4,
+      "pid": 1,
+      "comment": "fuk me"
+    },
+    {
+      "id": 4,
+      "uid": 5,
+      "pid": 1,
+      "comment": "hi my names jeff"
+    },
+    {
+      "id": 5,
+      "uid": 5,
+      "pid": 1,
+      "comment": ":("
+    },
+    {
+      "id": 6,
+      "uid": 4,
+      "pid": 1,
+      "comment": "my name is not jeff"
+    },
+    {
+      "id": 7,
+      "uid": 2,
+      "pid": 8,
+      "comment": "đây là 1 sự lười biếng trong khâu xây dựng nội dung"
+    },
+    {
+      "id": 8,
+      "uid": 2,
+      "pid": 9,
+      "comment": "Đây Cũng là 1 sự lười biếng"
+    }
+  ],
+  "post": [
+    {
+      "id": 2,
+      "cid": 1,
+      "title": "Have anyone encounter bears ?"
+    },
+    {
+      "id": 3,
+      "cid": 3,
+      "title": "she doesnt love me back, should i kill her?"
+    },
+    {
+      "id": 1,
+      "cid": 1,
+      "title": "Anyone knows how to make fire ?"
+    },
+    {
+      "id": 4,
+      "cid": 3,
+      "title": "what is love?"
+    },
+    {
+      "id": 5,
+      "cid": 4,
+      "title": "Are cats slowly taking over the world?"
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
       "uid": 2,
       "pid": 1,
-      "comment": "i hate this post"
+      "comment": "no, just use a lighter"
+    },
+    {
+      "id": 2,
+      "uid": 4,
+      "pid": 1,
+      "comment": "what is fire???"
     },
     {
       "id": 3,
       "uid": 2,
       "pid": 1,
-      "comment": "this post's suck"
+      "comment": "if you rub ur cock fast enough, you will produce enough heat energy to light up any source of things"
+    }
+  ],
+  "reply": [
+    {
+      "id": 1,
+      "uid": 2,
+      "cid": 2,
+      "comment": "fuk u"
     },
     {
-      "id": 5,
-      "uid": 2,
-      "pid": 2,
-      "comment": "Epstein did not kill himself"
+      "id": 2,
+      "uid": 4,
+      "cid": 1,
+      "comment": "u suck, no help at all"
+    },
+    {
+      "id": 3,
+      "uid": 4,
+      "cid": 1,
+      "comment": "come home and do something useful madafuk"
+    },
+    {
+      "id": 6,
+      "uid": 4,
+      "cid": 2,
+      "comment": "fuk u too"
+    }
+  ],
+  "category_post": [
+    {
+      "id": 1,
+      "name": "Du lịch"
+    },
+    {
+      "id": 2,
+      "name": "Học Tập"
+    },
+    {
+      "id": 3,
+      "name": "Tình Yêu"
+    },
+    {
+      "id": 4,
+      "name": "Chính trị"
     }
   ]
 }

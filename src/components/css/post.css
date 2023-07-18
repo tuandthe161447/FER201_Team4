@@ -1,19 +1,10 @@
-.home{
+.post{
     position: relative;
-    width: 600px;
-    min-height: 150px;
+    width: 800px;
+    height: 100px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: all .35s ease;
     border-radius: 10px;
     box-shadow: 0 2px 5px 0 #2C3E50, 0 4px 12px 0 #4CA1AF;
-}
-
-
-.home img{
-    margin: 9px;
-    width: 560px; 
-    height: 460px; 
-    object-fit: cover;
-    border-radius: 5px;
 }

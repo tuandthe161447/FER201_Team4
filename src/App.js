@@ -14,6 +14,8 @@ import EditPost from './components/EditPost';
 import Usermanager from './components/Usermanager';
 import UserDetail from './components/UserDetail';
 import BlogDetail from './components/blog/Blog_detail';
+import Posts from './components/post/post';
+import PostDetail from './components/post/post_detail';
 
 
 function App() {
@@ -23,12 +25,14 @@ function App() {
       <BrowserRouter>
 
         <Routes>
+          <Route path='/post' element={<Posts />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/' element={<Home />} />
           <Route path='/usermanager' element={<Usermanager />} />
           <Route path='/postmanager' element={<PostManager />} />
           <Route path='/create' element={<Create />} />
-          <Route path='/blog/detail/:pid' element={<BlogDetail />} />
+          <Route path='/post/detail/:bid' element={<PostDetail />} />
+          <Route path='/blog/detail/:bid' element={<BlogDetail />} />
           <Route path='/edit/:code' element={<EditPost />} />
           <Route path='/user/:code' element={<UserDetail />} />
           <Route path='/login' element={<Login />} />
