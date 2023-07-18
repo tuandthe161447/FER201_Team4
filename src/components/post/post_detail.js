@@ -70,13 +70,13 @@ const PostDetail = () => {
                         <Row>
                             <div className='box comment'>
                                 <Row>
-                                    <Col xs={2}>
+                                    <Col xs={5}>
                                         <img src='https://i.pinimg.com/originals/ae/ff/d6/aeffd6d2e76161d3d7b89cffca8662c1.jpg' />
                                     </Col>
-                                    <Col xs={10}>
+                                    <Col xs={7}>
                                         <h4>
                                             {
-                                                user.map(u => u.id = c.uid ? u.uName : '')
+                                                user.map(u => u.id == c.uid ? u.uName : '')
                                             }
                                         </h4>
                                         <h5>{c.comment}</h5>
