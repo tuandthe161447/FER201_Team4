@@ -7,7 +7,7 @@ const Category = () => {
 
     const navigate = useNavigate();
 
-    const api = "http://localhost:9999/category_post"
+    const api = "http://localhost:9999/category_blog"
 
     useEffect(() => {
         fetch(api).then((res) => res.json())
@@ -21,10 +21,11 @@ const Category = () => {
     return (
         <div>
             <h3>Category</h3>
+            
             {
                 category.map((c) => (
                     <div key={c.id}>
-                        <Link to={"/post/category/" + c.id}>{c.name}</Link>
+                        <Link to={"/blog/category/" + c.id}>{c.name}</Link>
                     </div>
                 ))
             }

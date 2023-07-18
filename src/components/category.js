@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
-import Sidebar from "./post/sidebar";
+import Sidebar from "./blog/sidebar";
 
 const Category = () => {
 
@@ -42,7 +42,7 @@ const Category = () => {
                     <Row>
                         <Col xs={12}>
                             <h2>Category: <span className="text-secondary">{c.name}</span></h2>
-                            <button className="btn btn-success mb-2" onClick={() => navigate("/")}>Back to list</button>
+                            <button className="btn btn-success mb-2" onClick={() => navigate("/blogs")}>Back to list</button>
                         </Col>
                     </Row>
                     <Row>
