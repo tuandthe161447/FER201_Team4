@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 import Sidebar from "./post/sidebar";
 
 
+
+
+
 const Posts = () => {
     const [posts, setPosts] = useState([]);
     const [category, setCategory] = useState([]);
+
     const [search, setSearch] = useState("");
+
 
     useEffect(() => {
         fetch("http://localhost:9999/post").then((res) => res.json())
@@ -29,7 +34,58 @@ const Posts = () => {
     }, [])
 
 
-    console.log()
+
+    return (
+        <Container>
+            <Row>
+                <Col xs={12}>
+
+                    <Row>
+                        <Col xs={12}>
+                            <h1 className="text-center mb-5">Post List</h1>
+                        </Col>
+                    </Row>
+                    {/* <Row>
+                        <Col>
+                            <p>Sort by: <select>
+                                <option value="0" key="">Newest</option>
+                                <option value="1" key="">Viewed count</option>
+                            </select>
+                            </p>
+                        </Col>
+                    </Row> */}
+                    <Row>
+                        <Col xs={9}>
+                            {
+                                posts.map((p) => (
+                                    <Row className="mb-3" key={p.id}>
+                                        <Col xs={3}>
+                                            <img src={p.img} alt="#" width={150} height={150} />
+                                        </Col>
+                                        <Col xs={9}>
+                                            <h2>{p.name}</h2>
+                                            <Row>
+                                                <Col xs={6}>
+                                                    <div>Category: {category.map(c => c.id === p.cid ? c.name : '')}</div>
+                                                </Col>
+                                                <Col xs={6}>
+                                                    <div className="text-right">{p.created_date}</div>
+                                                </Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                ))
+                            }
+                        </Col>
+                        <Col xs={3}>
+                            <Sidebar />
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+        </Container >
+
+
 
     return (
         <Container className="mt-5">
@@ -84,6 +140,7 @@ const Posts = () => {
             </Row>
 
         </Container>
+
     );
 }
 
