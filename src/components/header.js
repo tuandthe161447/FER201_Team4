@@ -1,11 +1,11 @@
 
 import { useEffect, useState } from 'react';
 import { NavDropdown, Navbar, Nav, Container } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+
 
 
 const Header = () => {
-    const navigate = useNavigate()
+   
     const [users, setUsers] = useState([]);
     let user
 
@@ -29,14 +29,14 @@ const Header = () => {
 
     return (
         //top header
-        <div className="row header-app d-flex fixed-top">
+        <div className="row header-app"> 
             <Container>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="/">Travelling Blog</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="#features">Blogs</Nav.Link>
+                            <Nav.Link href="/posts">Posts</Nav.Link>
                             <NavDropdown title="Categories" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
