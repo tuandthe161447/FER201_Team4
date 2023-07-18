@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import '../css/post_detail.css'
 import parse from 'html-react-parser';
 
-const PostDetail = () => {
+const BlogDetail = () => {
 
     const { pid } = useParams();
     const [p, setPosts] = useState([]);
@@ -14,7 +14,7 @@ const PostDetail = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:9999/post/' + pid)
+        fetch('http://localhost:9999/blog/' + pid)
             .then(resp => resp.json())
             .then(data => {
                 setPosts(data);
@@ -37,7 +37,7 @@ const PostDetail = () => {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:9999/comment')
+        fetch('http://localhost:9999/feedback')
             .then(resp => resp.json())
             .then(data => {
                 setComment(data.filter(s => s.pid == pid));
@@ -70,13 +70,13 @@ const PostDetail = () => {
                         <Row>
                             <div className='box comment'>
                                 <Row>
-                                    <Col xs={2}>
+                                    <Col xs={5}>
                                         <img src='https://i.pinimg.com/originals/ae/ff/d6/aeffd6d2e76161d3d7b89cffca8662c1.jpg' />
                                     </Col>
-                                    <Col xs={10}>
+                                    <Col xs={7}>
                                         <h4>
                                             {
-                                                user.map(u => u.id = c.uid ? u.uName : '')
+                                                user.map(u => u.id == c.uid ? u.uName : '')
                                             }
                                         </h4>
                                         <h5>{c.comment}</h5>
@@ -93,4 +93,4 @@ const PostDetail = () => {
 
 }
 
-export default PostDetail;
+export default BlogDetail;
