@@ -14,7 +14,7 @@ import Create from './components/Create';
 import EditPost from './components/EditPost';
 import Usermanager from './components/Usermanager';
 import UserDetail from './components/UserDetail';
-// import PostDetail from './components/post/post_detail';
+import BlogDetail from './components/blog/Blog_detail';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
           <Route path='/usermanager' element={<Usermanager />} />
           <Route path='/postmanager' element={<PostManager />} />
           <Route path='/create' element={<Create />} />
-          {/* <Route path='/post/detail/:pid' element={<PostDetail />} /> */}
+          <Route path='/blog/detail/:pid' element={<BlogDetail />} />
           <Route path='/edit/:code' element={<EditPost />} />
           <Route path='/user/:code' element={<UserDetail />} />
           <Route path='/login' element={<Login />} />

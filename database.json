@@ -168,22 +168,22 @@
       "created_date": "6/7/2023"
     }
   ],
-  "comment": [
+  "feedback": [
     {
       "id": 1,
-      "uid": 1,
+      "uid": 2,
       "pid": 1,
       "comment": "i hate this shit"
     },
     {
       "id": 2,
-      "uid": 1,
+      "uid": 2,
       "pid": 1,
       "comment": "i hate this post"
     },
     {
       "id": 3,
-      "uid": 1,
+      "uid": 2,
       "pid": 1,
       "comment": "this post's suck"
     }
