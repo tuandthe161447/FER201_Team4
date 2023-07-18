@@ -63,40 +63,7 @@ const Login = () => {
         }
     }
 
-    const ProceedLoginusingAPI = (e) => {
-
-        e.preventDefault();
-        if (validate()) {
-            ///implentation
-            console.log('proceed');
-            let inputobj = {
-                "email": email,
-                "passWord": passWord
-            };
-            fetch("http://localhost:9999/users/", {
-                method: 'POST',
-                headers: { 'Content-Type': 'Application/Json', 'Charset': "UTF8" },
-                body: JSON.stringify(inputobj)
-            }).then((res) => {
-                return res.json();
-            }).then((resp) => {
-                console.log(resp)
-                if (Object.keys(resp).length === 0) {
-                    toast.error('Login failed, invalid credentials');
-                } else {
-                    toast.success('Success');
-                    sessionStorage.setItem('email', email);
-                    sessionStorage.setItem('jwttoken', resp.jwtToken);
-                    navigate('/')
-                }
-
-            }).catch((err) => {
-                toast.error('Login Failed due to :' + err.message);
-            });
-
-        }
-
-    }
+    
     const validate = () => {
         let result = true;
         if (email === '' || email === null) {
@@ -118,7 +85,7 @@ const Login = () => {
             <ToastContainer />
 
             <Header />
-            <form style={{ backgroundColor: 'white', marginTop: '100px', padding: '80px', borderRadius: '20px' }} onSubmit={ProceedLogin || ProceedLoginusingAPI}>
+            <form style={{ backgroundColor: 'white', marginTop: '100px', padding: '80px', borderRadius: '20px' }} onSubmit={ProceedLogin }>
                 <h1 style={{ textAlign: 'center', paddingBottom: '30px', textTransform: 'uppercase' }}>
                     Login
                 </h1>

@@ -49,17 +49,21 @@ const Header = () => {
                         <Nav>
                             {
                                 (user != undefined) ? <Nav >
-                                    <Nav.Item style={{ color: 'white', margin: 'auto 0' }}>{"Hello"} {user}</Nav.Item>
-                                    <Nav.Link href="/login">Log Out</Nav.Link>
-                                    {
-                                        userrole == true ? <Nav>
-                                            <Nav.Link href='/post'>
-                                                Manage
-                                            </Nav.Link>
-                                        </Nav>
-                                            :
-                                            <></>
-                                    }
+
+                                    <NavDropdown title={"Hello" + user}>
+                                        <NavDropdown.Item href="/login">Log Out</NavDropdown.Item>
+                                        <NavDropdown.Item href="/login" >
+                                            {
+                                                userrole == true ? <Nav>
+                                                    <Nav.Link href='/post'style={{color:'black'}}>
+                                                        Manage
+                                                    </Nav.Link>
+                                                </Nav>
+                                                    :
+                                                    <></>
+                                            }
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
                                 </Nav> : <Nav>
                                     <Nav.Link href="/login">Login</Nav.Link>
                                     <Nav.Link href="/sign_up">Sign up</Nav.Link>
