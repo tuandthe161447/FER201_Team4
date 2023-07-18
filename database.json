@@ -139,5 +139,26 @@
       "cid": 2,
       "id": 12
     }
+  ],
+
+  "comment": [
+    {
+      "id": 1,
+      "uid": 1,
+      "pid": 4,
+      "comment": "i hate this shit"
+    },
+    {
+      "id": 2,
+      "uid": 1,
+      "pid": 4,
+      "comment": "i hate this post"
+    },
+    {
+      "id": 3,
+      "uid": 1,
+      "pid": 4,
+      "comment": "this post's suck"
+    }
   ]
 }

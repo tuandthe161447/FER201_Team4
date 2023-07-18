@@ -44,10 +44,12 @@ const Home = () => {
                                 {
                                     posts.map(p => (
                                         <Col xs={4}>
-                                            <div className='box pt-3'>
-                                                <img src={p.img} alt="#" />
-                                                <h2>{p.name}</h2>
-                                            </div>
+                                            <Link to={'/post/detail/'+p.id}>
+                                                <div className='box pt-3'>
+                                                    <img src={p.img} alt="#" />
+                                                    <h2>{p.name}</h2>
+                                                </div>
+                                            </Link>
                                         </Col>
                                     ))
                                 }

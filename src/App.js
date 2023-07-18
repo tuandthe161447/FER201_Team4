@@ -13,6 +13,7 @@ import Create from './components/Create';
 import EditPost from './components/EditPost';
 import Usermanager from './components/Usermanager';
 import UserDetail from './components/UserDetail';
+import PostDetail from './components/post/post_detail';
 
 
 function App() {
@@ -20,15 +21,19 @@ function App() {
     <>
       <Header />
       <BrowserRouter>
-      <Routes>
-        <Route path='/usermanager' element={<Usermanager/>}/>
-        <Route path='/postmanager' element={<PostManager/>}/>
-        <Route path='/create' element={<Create/>}/>
-        <Route path='/edit/:code' element={<EditPost/>}/>
-        <Route path='/user/:code' element={<UserDetail/>}/>
-      </Routes>
+        <Routes>
+          <Route path='/posts' element={<Posts/>} />
+          <Route path='/' element={<Home />} />
+          <Route path='/usermanager' element={<Usermanager />} />
+          <Route path='/postmanager' element={<PostManager />} />
+          <Route path='/create' element={<Create />} />
+          <Route path='/post/detail/:pid' element={<PostDetail />} />
+          <Route path='/edit/:code' element={<EditPost />} />
+          <Route path='/user/:code' element={<UserDetail />} />
+        </Routes>
       </BrowserRouter>
-      <Footer />
+      <div className='' style={{marginTop: '100px'}}><Footer /></div>
+      
     </>
   );
 }

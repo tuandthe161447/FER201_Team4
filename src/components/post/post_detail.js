@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Row, Container, Table } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
+import '../css/post_detail.css'
 
 const PostDetail = () => {
 
     const { pid } = useParams();
     const [p, setPosts] = useState([]);
-    const [comment, setComment] = useState([])
+    const [comment, setComment] = useState([]);
+    const [user, setUser] = useState([]);
 
 
     useEffect(() => {
@@ -14,6 +16,17 @@ const PostDetail = () => {
             .then(resp => resp.json())
             .then(data => {
                 setPosts(data);
+            })
+            .catch(err => {
+                console.log(err.massage);
+            })
+    }, []);
+
+    useEffect(() => {
+        fetch('http://localhost:9999/users')
+            .then(resp => resp.json())
+            .then(data => {
+                setUser(data);
             })
             .catch(err => {
                 console.log(err.massage);
@@ -46,11 +59,22 @@ const PostDetail = () => {
             <Row>
                 <input className='form-control' type='text' placeholder='Enter your comment'></input>
             </Row>
-            <Row>
+            <div>
                 {
-                    comment.map
+                    comment.map(c => (
+                        <Row>
+                            <div className='box'>
+                                <h4>
+                                    {
+                                        user.map(u => u.id = c.uid ? u.uName : '')
+                                    }
+                                </h4>
+                                <h5>{c.comment}</h5>
+                            </div>
+                        </Row>
+                    ))
                 }
-            </Row>
+            </div>
         </Container>
     )
 
