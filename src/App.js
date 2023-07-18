@@ -4,38 +4,43 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header';
 import Slide_hearder from './components/slide_header';
 import Footer from './components/footer';
+import Login from './components/login';
+import Sign_up from './components/sign_up';
 import Blog from './components/Blog';
 import Category from './components/category';
-
+import Home from './components/home';
 import PostManager from './components/PostManager';
 import Create from './components/Create';
 import EditPost from './components/EditPost';
 import Usermanager from './components/Usermanager';
 import UserDetail from './components/UserDetail';
-import Test from './components/Test';
+// import PostDetail from './components/post/post_detail';
 
 
 function App() {
   return (
-    <div className='container-fluid' >
-      {<Header />}
+    <>
+      <Header />
       <BrowserRouter>
 
-
-        {/* <Slide_hearder/> */}
         <Routes>
+
           <Route path='/blog' element={<Blog />} />
-          {/* <Route path='/blog/category/:cid' element={<Category />} /> */}
+          <Route path='/' element={<Home />} />
           <Route path='/usermanager' element={<Usermanager />} />
           <Route path='/postmanager' element={<PostManager />} />
           <Route path='/create' element={<Create />} />
+          {/* <Route path='/post/detail/:pid' element={<PostDetail />} /> */}
           <Route path='/edit/:code' element={<EditPost />} />
           <Route path='/user/:code' element={<UserDetail />} />
-          <Route path='/test/:code' element={<Test />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/Sign_up' element={<Sign_up />} />
+
         </Routes>
-        {<Footer />}
       </BrowserRouter>
-    </div>
+      <div className='' style={{ marginTop: '100px' }}><Footer /></div>
+
+    </>
   );
 }
 

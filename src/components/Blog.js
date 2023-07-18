@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Sidebar from "./blog/sidebar";
@@ -9,9 +8,7 @@ import Sidebar from "./blog/sidebar";
 const Posts = () => {
     const [posts, setPosts] = useState([]);
     const [category, setCategory] = useState([]);
-
     const [search, setSearch] = useState("");
-
 
     useEffect(() => {
         fetch("http://localhost:9999/blog").then((res) => res.json())
