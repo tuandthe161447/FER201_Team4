@@ -6,7 +6,6 @@ import Slide_hearder from './components/slide_header';
 import Footer from './components/footer';
 import Blog from './components/Blog';
 import Category from './components/category';
-import BlogDetail from './components/BlogDetail'
 
 import PostManager from './components/PostManager';
 import Create from './components/Create';
@@ -33,7 +32,6 @@ function App() {
           <Route path='/edit/:code' element={<EditPost />} />
           <Route path='/user/:code' element={<UserDetail />} />
           <Route path='/test/:code' element={<Test />} />
-          <Route path='/blog/:code' element={<BlogDetail />} />
         </Routes>
         {<Footer />}
       </BrowserRouter>
