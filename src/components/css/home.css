@@ -1,6 +1,6 @@
 .box{
     position: relative;
-    width: 246px;
+    width: 250px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: all .35s ease;
@@ -10,6 +10,7 @@
 
 
 .box img{
+    margin: 9px;
     width: 230px; 
     height: 180px; 
     object-fit: cover;

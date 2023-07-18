@@ -1,4 +1,4 @@
-.box{
+.comment{
     position: relative;
     width: auto;
     margin-bottom: 20px;
@@ -6,4 +6,22 @@
     transition: all .35s ease;
     border-radius: 10px;
     box-shadow: 0 2px 5px 0 #2C3E50, 0 4px 12px 0 #4CA1AF;
+}
+
+.comment h5{
+    margin: 5px 20px 5px 20px;
+    font-weight: normal;
+}
+
+.comment h4{
+    margin: 5px 10px 5px 10px;
+    font-weight: bold;
+}
+
+.comment img{
+    margin: 9px;
+    width: 100px; 
+    height: 90px; 
+    object-fit: cover;
+    border-radius: 50px;
 }
