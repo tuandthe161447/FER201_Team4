@@ -22,7 +22,7 @@ export default function Create() {
         const postobj = { name, created_date, content, cid, img }
         console.log(postobj)
 
-        fetch('http://localhost:9999/post', {
+        fetch('http://localhost:9999/blog', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(postobj)

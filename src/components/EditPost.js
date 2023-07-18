@@ -20,7 +20,7 @@ const EditPost = () => {
 
     useEffect(() => {
         console.log(code);
-        fetch('http://localhost:9999/post/'+code).then(resp => { return resp.json();
+        fetch('http://localhost:9999/blog/'+code).then(resp => { return resp.json();
         }).then(resp => {
             setId(resp.id);
             setTitle(resp.name);
@@ -47,7 +47,7 @@ const EditPost = () => {
         const postobj = { name, created_date, content, cid }
         console.log(postobj)
 
-        fetch('http://localhost:9999/post/' + id, {
+        fetch('http://localhost:9999/blog/' + id, {
             method: "PUT",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(postobj)
