@@ -72,7 +72,6 @@ const EditPost = () => {
             return
         }
         const postobj = { name, created_date, content, cid }
-        console.log(postobj)
 
         fetch('http://localhost:9999/blog/' + id, {
             method: "PUT",
