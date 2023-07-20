@@ -219,6 +219,11 @@
       "id": 5,
       "cid": 4,
       "title": "Are cats slowly taking over the world?"
+    },
+    {
+      "title": "Test",
+      "cid": 1,
+      "id": 6
     }
   ],
   "comment": [
@@ -245,6 +250,12 @@
       "uid": 2,
       "pid": 1,
       "comment": "Rub your stick"
+    },
+    {
+      "id": 5,
+      "uid": 1,
+      "pid": 6,
+      "comment": "test discussion"
     }
   ],
   "reply": [
@@ -283,6 +294,18 @@
       "uid": 1,
       "cid": 3,
       "comment": "noice"
+    },
+    {
+      "id": 9,
+      "uid": 1,
+      "cid": 5,
+      "comment": "test reply"
+    },
+    {
+      "id": 10,
+      "uid": 2,
+      "cid": 5,
+      "comment": "test reply 2"
     }
   ],
   "category_post": [

@@ -8,6 +8,7 @@ const EditAPost = () => {
     const [id, setId] = useState(0)
     const [comment, setComment] = useState([])
     const [reply, setReply] = useState([])
+    const [user, setUser] = useState([])
 
 
     const { code } = useParams()
@@ -26,6 +27,8 @@ const EditAPost = () => {
     }, [])
 
 
+
+
     useEffect(() => {
         fetch('http://localhost:9999/comment').then((resp) => {
             return resp.json()
@@ -39,6 +42,14 @@ const EditAPost = () => {
             return resp.json()
         }).then((resp) => {
             setReply(resp)
+        })
+    }, [])
+
+    useEffect(() => {
+        fetch('http://localhost:9999/users').then((resp) => {
+            return resp.json()
+        }).then((resp) => {
+            setUser(resp)
         })
     }, [])
 
@@ -67,7 +78,7 @@ const EditAPost = () => {
         if (window.confirm('u sure bro ?')) {
             fetch('http://localhost:9999/comment/' + cId, {
                 method: "DELETE"
-            
+
             }).then((resp) => {
                 window.location.reload()
             }).catch((err) => {
@@ -138,6 +149,7 @@ const EditAPost = () => {
                                 <td>ID</td>
                                 <td>reply to</td>
                                 <td>content</td>
+                                <td>user</td>
                                 <td>Action</td>
                             </tr>
                         </thead>
@@ -150,6 +162,11 @@ const EditAPost = () => {
                                             <td>{title}</td>
                                             <td>{c.comment}</td>
                                             <td>
+                                                {
+                                                    user.map(u => (u.id === c.uid ? u.uName : ''))
+                                                }
+                                            </td>
+                                            <td>
                                                 <button className="btn btn-danger" onClick={() => { handerRemoveComment(c.id) }}>Delete</button>
                                             </td>
                                         </tr>
@@ -160,6 +177,11 @@ const EditAPost = () => {
                                                         <td>{r.id}</td>
                                                         <td>{c.comment}</td>
                                                         <td>{r.comment}</td>
+                                                        <td>
+                                                            {
+                                                                user.map(u => (u.id === r.uid ? u.uName : ''))
+                                                            }
+                                                        </td>
                                                         <td>
                                                             <button className="btn btn-danger" onClick={() => { handerRemoveReply(r.id) }}>Delete</button>
                                                         </td>

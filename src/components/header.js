@@ -77,6 +77,18 @@ const Header = () => {
                                                     <></>
                                             }
                                         </NavDropdown.Item>
+                                        <NavDropdown.Item href="/login" >
+                                            {
+                                                userrole == true ? <Nav>
+                                                    <Nav.Link href='/aPostManager'style={{color:'black'}}>
+                                                        Post Manage
+                                                    </Nav.Link>
+                                                    
+                                                </Nav>
+                                                    :
+                                                    <></>
+                                            }
+                                        </NavDropdown.Item>
                                     </NavDropdown>
                                 </Nav> 
                                 : 
