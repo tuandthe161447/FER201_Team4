@@ -78,6 +78,8 @@ const Home = () => {
 
 
     return (
+        
+
         <Container fluid>
             <Row>
                 <Slide_hearder />
@@ -87,7 +89,7 @@ const Home = () => {
                     <Row>
                         <Col>
                             <h1 className='text-center pt-5 pb-3'>Trending Blogs</h1>
-                            <Row style={{ marginLeft: '100px' }}>
+                            <Row>
                                 {
                                     blog.map(p => (
                                         <Col xs={4}>
@@ -106,7 +108,7 @@ const Home = () => {
                     <Row>
                         <Col>
                             <h1 className='text-center pt-5 pb-3'>Latest Posts</h1>
-                            <Row style={{ marginLeft: '100px' }}>
+                            <Row>
                                 {
                                     posts.map(p => (
                                         <Col xs={4}>

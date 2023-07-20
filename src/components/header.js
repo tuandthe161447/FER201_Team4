@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         //top header
-        <div className="row header-app" style={{position:'fixed', width:'100%', zIndex:'999'}}> 
+        <div className="row header-app" style={{position:'fixed', width:'100%', zIndex:'999', margin:'0'}}> 
             <Container>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="/">Travelling Blog</Navbar.Brand>
