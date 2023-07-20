@@ -57,7 +57,7 @@ const Header = () => {
                                             {
                                                 userrole == true ? <Nav>
                                                     <Nav.Link href='/postmanager'style={{color:'black'}}>
-                                                        Post Manage
+                                                        Blog Manage
                                                     </Nav.Link>
                                                     
                                                 </Nav>

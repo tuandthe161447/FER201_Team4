@@ -10,6 +10,7 @@ const Blog = () => {
     const [search, setSearch] = useState("");
     const [allblog, setallBlog] = useState([]);
     const [filter, setFilter] = useState(0);
+    const [vote, setVote] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:9999/blog").then((res) => res.json())
@@ -33,6 +34,15 @@ const Blog = () => {
             .then((res) => res.json())
             .then((data) => {
                 setCategory(data)
+            }).catch(err => {
+                console.log(err.message)
+            })
+    }, [])
+
+    useEffect(() => {
+        fetch("http://localhost:9999/vote").then((res) => res.json())
+            .then((data) => {
+                setVote(data);
             }).catch(err => {
                 console.log(err.message)
             })
@@ -90,10 +100,13 @@ const Blog = () => {
                                         <Col xs={9}>
                                             <Link to={"/blog/detail/" + p.id}><label style={{ fontSize: '30px' }}>{p.name}</label></Link>
                                             <Row>
-                                                <Col xs={6}>
+                                                <Col xs={4}>
                                                     <div>Category: {category.map(c => c.id === p.cid ? c.name : '')}</div>
                                                 </Col>
-                                                <Col xs={6}>
+                                                <Col xs={4}>
+                                                    <div>Votes: {vote.filter(v => v.pid == p.id).length}</div>
+                                                </Col>
+                                                <Col xs={4}>
                                                     <div className="text-right font-weight-lighter color text-secondary" >{p.created_date}</div>
                                                 </Col>
                                             </Row>

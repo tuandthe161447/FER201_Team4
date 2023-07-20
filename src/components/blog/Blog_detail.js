@@ -3,6 +3,7 @@ import { Button, Col, Row, Container, Table, Form } from 'react-bootstrap';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import '../css/post_detail.css'
 import parse from 'html-react-parser';
+import { SuitHeart, SuitHeartFill } from 'react-bootstrap-icons';
 
 const BlogDetail = () => {
 
@@ -17,6 +18,9 @@ const BlogDetail = () => {
     const navigate = useNavigate();
     const [editCommentId, setEditCommentId] = useState(0);
     const [editedComment, setEditedComment] = useState('');
+    const [vote, setVote] = useState([]);
+    const [voted, setVoted] = useState(false);
+    const [voteId, setVoteId] = useState(0);
 
 
     let uid;
@@ -53,12 +57,34 @@ const BlogDetail = () => {
         fetch('http://localhost:9999/feedback')
             .then(resp => resp.json())
             .then(data => {
+                let count = 0;
                 setComments(data.filter(s => s.pid == bid));
+                count = comments.count();
+                console.log(count);
             })
             .catch(err => {
                 console.log(err.massage);
             })
     }, []);
+    useEffect(() => {
+        fetch('http://localhost:9999/vote/')
+            .then(resp => resp.json())
+            .then(data => {
+                setVote(data);
+                data.map(v => {
+                    if (v.uid == uid && v.pid == pid) {
+                        setVoted(true);
+                        setVoteId(v.id);
+                    }
+                })
+
+            })
+            .catch(err => {
+                console.log(err.massage);
+            })
+    }, []);
+
+
 
     const content = parse(c);
 
@@ -121,6 +147,30 @@ const BlogDetail = () => {
         }
     };
 
+    const handleDisLike = () => {
+        fetch('http://localhost:9999/vote/' + voteId, {
+            method: "DELETE"
+        })
+            .then(() => {
+                window.location.reload();
+            })
+            .catch(err => {
+                console.log(err.massage)
+            })
+    }
+
+
+    const handleLike = () => {
+        const com = { id: 0, uid, pid }
+        fetch('http://localhost:9999/vote', {
+            method: 'POST',
+            headers: { 'Content-type': 'Application/Json', 'Charset': 'UTF8' },
+            body: JSON.stringify(com)
+        }).then(() => {
+            window.location.reload();
+        }).catch(err => console.log(err.message));
+    }
+
 
     return (
         <Container>
@@ -135,6 +185,27 @@ const BlogDetail = () => {
             <Row className='pt-3'>
                 <h4>{content}</h4>
             </Row>
+            <Row className='pt-3'>
+                <h2>Votes:</h2>
+            </Row>
+            <Row className=''>
+                <h2 style={{ marginLeft: '7px' }}>{vote.filter(v => v.pid == pid).length}</h2>
+            </Row>
+            {
+                (uid !== undefined) ?
+                    <Row className=''>
+                        {
+                            (voted) ?
+                                <SuitHeartFill onClick={handleDisLike} style={{ width: '35px', height: '35px', color: 'red' }} />
+                                :
+                                <SuitHeart onClick={handleLike} style={{ width: '35px', height: '35px' }} />
+                        }
+                    </Row>
+                    : <Row>
+                        <SuitHeart style={{ width: '35px', height: '35px' }} />
+                    </Row>
+            }
+
             <Row className='pt-3'>
                 <h2>Discussion: </h2>
             </Row>
