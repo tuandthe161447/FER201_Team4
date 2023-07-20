@@ -20,7 +20,7 @@ export default function Create() {
 
     const handlesubmit = (e) => {
         e.preventDefault()
-        if (name === '' || created_date === '' || img === '' || content === '' || !validURL(img)){
+        if (name === '' || created_date === '' || img === '' || content === ''){
             alert('invalid post')
             return
         }
@@ -65,7 +65,7 @@ export default function Create() {
                 <Row>
                     <Col>
                         <Card style={{ minHeight: '90vh' }}>
-                            <Card.Header style={{ textAlign: 'center' }}><h2>Create Post</h2></Card.Header>
+                            <Card.Header style={{ textAlign: 'center' }}><h2>Create Blog</h2></Card.Header>
                             <Card.Body>
                                 <Form.Group>
                                     <Editor

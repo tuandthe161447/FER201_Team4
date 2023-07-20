@@ -24,9 +24,10 @@ import EditAPost from './components/EditAPost';
 function App() {
   return (
     <>
+    
       <Header />
       <BrowserRouter>
-
+      <div className='' style={{ paddingTop: '72px' }}></div>
         <Routes>
           <Route path='/post' element={<Posts />} />
           <Route path='/blog' element={<Blog />} />
