@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         //top header
-        <div className="row header-app"> 
+        <div className="row header-app" style={{position:'fixed', width:'100%', zIndex:'999'}}> 
             <Container>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="/">Travelling Blog</Navbar.Brand>
@@ -58,7 +58,7 @@ const Header = () => {
                                             {
                                                 userrole == true ? <Nav>
                                                     <Nav.Link href='/postmanager'style={{color:'black'}}>
-                                                        Post Manage
+                                                        Blog Manage
                                                     </Nav.Link>
                                                     
                                                 </Nav>
@@ -71,6 +71,18 @@ const Header = () => {
                                                 userrole == true ? <Nav>
                                                     <Nav.Link href='/usermanager'style={{color:'black'}}>
                                                         User Manage
+                                                    </Nav.Link>
+                                                    
+                                                </Nav>
+                                                    :
+                                                    <></>
+                                            }
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="/login" >
+                                            {
+                                                userrole == true ? <Nav>
+                                                    <Nav.Link href='/aPostManager'style={{color:'black'}}>
+                                                        Post Manage
                                                     </Nav.Link>
                                                     
                                                 </Nav>

@@ -70,7 +70,7 @@ const Posts = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={9}>
+                        <Col xs={12}>
                             {
                                 posts.map((p) => (
                                     <Row className="box post mb-3" key={p.id}>
@@ -95,6 +95,7 @@ const Posts = () => {
                                 onChange={e => setSearch(e.target.value)} placeholder="Enter post title to search" />
                                 <button style={{ marginTop: '8px' }} type="submit" className="btn btn-primary">Search</button>
                             </Form>
+
                             <div>
                                 <h3>Category</h3>
                                 {
@@ -107,7 +108,7 @@ const Posts = () => {
                                 <input type='radio' name='filter' value={0} onChange={e => setFilter(e.target.value)} /> All <br />
 
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
 
                 </Col>
