@@ -21,9 +21,10 @@ import PostDetail from './components/post/post_detail';
 function App() {
   return (
     <>
+    
       <Header />
       <BrowserRouter>
-
+      <div className='' style={{ paddingTop: '72px' }}></div>
         <Routes>
           <Route path='/post' element={<Posts />} />
           <Route path='/blog' element={<Blog />} />
