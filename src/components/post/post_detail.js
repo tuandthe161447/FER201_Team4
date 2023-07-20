@@ -212,7 +212,7 @@ const PostDetail = () => {
                     <Row>
                         <Form onSubmit={e => handleSubmit(e)}>
                             <Form.Group>
-                                <Form.Control style={{ width: '1100px', height: '50px', borderRadius: '10px' }} value={comment} onChange={(e) => setCommentRep(e.target.value)} placeholder='Share your opinion' />
+                                <Form.Control style={{ width: '1100px', height: '50px', borderRadius: '10px' }} value={comment} onChange={(e) => setComment(e.target.value)} placeholder='Share your opinion' />
                             </Form.Group>
                             <Form.Group className="pt-2">
                                 <Button type="submit" className="btn btn-success" >
