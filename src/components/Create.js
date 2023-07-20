@@ -12,6 +12,7 @@ export default function Create() {
     const [created_date, setDate] = useState('')
     const [cid, setCatergory] = useState(1)
     const [img, setImg] = useState('')
+
     const navigate = useNavigate()
 
     
