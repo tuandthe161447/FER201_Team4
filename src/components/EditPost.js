@@ -71,7 +71,7 @@ const EditPost = () => {
             alert('invalid post')
             return
         }
-        const postobj = { name, created_date, content, cid }
+        const postobj = { name, created_date, img, content, cid }
         console.log(postobj)
 
         fetch('http://localhost:9999/blog/' + id, {
