@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import '../css/post.css'
 
@@ -11,16 +11,23 @@ const Posts = () => {
     const [category, setCategory] = useState([]);
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(0);
+    const [allPost, setAllPost] = useState([]);
 
 
     useEffect(() => {
         fetch("http://localhost:9999/post").then((res) => res.json())
             .then((data) => {
-                setPosts(data)
+                if (filter !== 0) {
+                    setPosts(data.filter((p) => (p.cid == filter)));
+                }
+                if (filter == 0) {
+                    setPosts(data);
+                }
+                setAllPost(data);
             }).catch(err => {
                 console.log(err.message)
             })
-    }, [])
+    }, [filter])
 
 
     useEffect(() => {
@@ -33,6 +40,23 @@ const Posts = () => {
             })
     }, [])
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (search.length === 0) {
+            if (filter !== 0) {
+                setPosts(allPost.filter((p) => (p.cid == filter)));
+            }
+            else {
+                setPosts(allPost);
+            }
+        }
+        else {
+            setPosts(posts.filter((s) => s.title.includes(search)))
+        }
+        setSearch('');
+        console.log(search)
+
+    }
 
 
     return (
@@ -64,17 +88,20 @@ const Posts = () => {
                                 ))
                             }
                         </Col>
-                        {/* <Col xs={3}>
-                            <div>
-                                <input style={{ width: '350px', height: '50px', borderRadius: '10px' }} type="text" name="seacrh" onSubmit={e => setSearch(e.target.value)} placeholder="Enter post title to search"/>
-                                <button style={{marginTop:'8px'}} type="submit" className="btn btn-primary">Search</button>
-                            </div>
+                        <Col xs={3}>
+                            <Form onSubmit={handleSearch}>
+                                <input className="form-control" style={{ width: '350px', height: '50px', borderRadius: '10px' }} 
+                                type="text" name="search" 
+                                onChange={e => setSearch(e.target.value)} placeholder="Enter post title to search" />
+                                <button style={{ marginTop: '8px' }} type="submit" className="btn btn-primary">Search</button>
+                            </Form>
+
                             <div>
                                 <h3>Category</h3>
                                 {
                                     category.map((c) => (
                                         <div key={c.id}>
-                                            <input  type='radio' name='filter' value={c.id} onChange={e => setFilter(e.target.value)} /> {c.name} <br />
+                                            <input type='radio' name='filter' value={c.id} onChange={e => setFilter(e.target.value)} /> {c.name} <br />
                                         </div>
                                     ))
                                 }

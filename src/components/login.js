@@ -89,8 +89,8 @@ const Login = () => {
             <ToastContainer />
 
            
-            <form style={{ backgroundColor: 'white', marginTop: '100px', padding: '80px', borderRadius: '20px' }} onSubmit={ProceedLogin }>
-                <h1 style={{ textAlign: 'center', paddingBottom: '30px', textTransform: 'uppercase' }}>
+            <form style={{ backgroundColor: 'white', marginTop: '70px', padding: '120px', borderRadius: '20px' }} onSubmit={ProceedLogin }>
+                <h1 style={{ textAlign: 'center', paddingBottom: '30px', textTransform: 'uppercase' , fontSize: '60px', cursor:'default'}}>
                     Login
                 </h1>
                 <div className="form-outline mb-4">
@@ -117,10 +117,6 @@ const Login = () => {
                             <label class="form-check-label" for="form2Example31"> Remember me </label>
                         </div>
                     </div>
-
-                    <div className="col">
-                        <a href="#!">Forgot password?</a>
-                    </div>
                 </div>
 
                 <button type="submit" className="btn btn-primary btn-block mb-4" >Sign in</button>
@@ -128,7 +124,7 @@ const Login = () => {
 
                 <div className="text-center">
                     <p>Not a member? <a href="/Sign_up">Register</a></p>
-
+                    <a href="#!">Forgot password?</a>
                 </div>
             </form>
 
