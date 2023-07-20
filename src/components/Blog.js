@@ -61,9 +61,10 @@ const Blog = () => {
             }
         }
         else {
-            setBlog(blog.filter((s) => s.name.includes(search)))
+            setBlog(blog.filter((s) => s.name.toLowerCase().includes(search)))
         }
         setSearch('');
+        console.log(search)
     }
 
 
@@ -100,10 +101,10 @@ const Blog = () => {
                                         <Col xs={9}>
                                             <Link to={"/blog/detail/" + p.id}><label style={{ fontSize: '30px' }}>{p.name}</label></Link>
                                             <Row>
-                                                <Col xs={4}>
+                                                <Col xs={6}>
                                                     <div>Category: {category.map(c => c.id === p.cid ? c.name : '')}</div>
                                                 </Col>
-                                                <Col xs={4}>
+                                                <Col xs={2}>
                                                     <div>Votes: {vote.filter(v => v.pid == p.id).length}</div>
                                                 </Col>
                                                 <Col xs={4}>

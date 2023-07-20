@@ -51,7 +51,7 @@ const Posts = () => {
             }
         }
         else {
-            setPosts(posts.filter((s) => s.title.includes(search)))
+            setPosts(posts.filter((s) => s.title.toLowerCase().includes(search)))
         }
         setSearch('');
         console.log(search)
@@ -70,7 +70,7 @@ const Posts = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={12}>
+                        <Col xs={9}>
                             {
                                 posts.map((p) => (
                                     <Row className="box post mb-3" key={p.id}>
@@ -108,7 +108,7 @@ const Posts = () => {
                                 <input type='radio' name='filter' value={0} onChange={e => setFilter(e.target.value)} /> All <br />
 
                             </div>
-                        </Col> */}
+                        </Col> 
                     </Row>
 
                 </Col>
