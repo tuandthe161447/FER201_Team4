@@ -16,6 +16,9 @@ import UserDetail from './components/UserDetail';
 import BlogDetail from './components/blog/Blog_detail';
 import Posts from './components/post/post';
 import PostDetail from './components/post/post_detail';
+import APostManager from './components/APostManager';
+import AddPost from './components/Addpost';
+import EditAPost from './components/EditAPost';
 
 
 function App() {
@@ -38,6 +41,10 @@ function App() {
           <Route path='/user/:code' element={<UserDetail />} />
           <Route path='/login' element={<Login />} />
           <Route path='/Sign_up' element={<Sign_up />} />
+          <Route path='/aPostManager' element={<APostManager/>} />
+          <Route path='/aPostManager/add' element={<AddPost/>} />
+          <Route path='/aPostManager/editPost/:code' element={<EditAPost/>} />
+          
         </Routes>
       </BrowserRouter>
       <div className='' style={{ marginTop: '100px' }}><Footer /></div>
