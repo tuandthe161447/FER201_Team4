@@ -51,7 +51,8 @@ const Header = () => {
                             {
                                 (user != undefined) ? <Nav >
 
-                                    <NavDropdown title={"Hello" + user}>
+                                    <NavDropdown title={"Hello " + user}>
+                                        <NavDropdown.Item href="/profile">Edit profile</NavDropdown.Item>
                                         <NavDropdown.Item href="/login">Log Out</NavDropdown.Item>
                                         <NavDropdown.Item href="/login" >
                                             {

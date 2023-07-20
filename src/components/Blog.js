@@ -58,7 +58,7 @@ const Blog = () => {
 
 
     //sort
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
     return (

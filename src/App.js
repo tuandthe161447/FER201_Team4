@@ -16,6 +16,7 @@ import UserDetail from './components/UserDetail';
 import BlogDetail from './components/blog/Blog_detail';
 import Posts from './components/post/post';
 import PostDetail from './components/post/post_detail';
+import Profile from './components/Profile';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path='/user/:code' element={<UserDetail />} />
           <Route path='/login' element={<Login />} />
           <Route path='/Sign_up' element={<Sign_up />} />
+          <Route path='/profile' element={<Profile />} />
         </Routes>
       </BrowserRouter>
       <div className='' style={{ marginTop: '100px' }}><Footer /></div>

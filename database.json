@@ -11,14 +11,14 @@
       "id": 2,
       "uName": "MeoBeo",
       "email": "meobeo@gmail.com",
-      "passWord": "12345678",
+      "passWord": "1321232123",
       "rId": false
     },
     {
       "id": 3,
       "uName": "PussySlayer69",
-      "email": "provip123@gmail.com",
-      "passWord": "12345678",
+      "email": "cuongdmthe170681@fpt.edu.vn",
+      "passWord": "12321321",
       "rId": false
     },
     {
@@ -32,6 +32,13 @@
       "id": 5,
       "uName": "XD Kekw",
       "email": "kekw@gmail.com",
+      "passWord": "12345678",
+      "rId": false
+    },
+    {
+      "id": 6,
+      "uName": "tien",
+      "email": "tien@gmail.com",
       "passWord": "12345678",
       "rId": false
     }
@@ -61,7 +68,7 @@
     },
     {
       "id": 2,
-      "name": "Kinh nghiệm du lịch Cát Bà 2023 từ A-Z",
+      "name": "Kinh nghiệm chuẩn bị cho chuyến du lịch hoàn hảo",
       "cid": 1,
       "img": "https://img.nhandan.com.vn/Files/Images/2022/03/23/HP2_1-1648033793048.jpg",
       "content": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",

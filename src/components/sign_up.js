@@ -18,11 +18,11 @@ const Sign_up = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [confirmPasswordError, setConfirmPasswordError] = useState('');
     const [isAddAble, setIsAddAble] = useState(false);
-    
-    
+
+
 
     useEffect(() => {
-        if (uNameError != "" || emailError != "" || passWordError != "" || confirmPasswordError != "" ) {
+        if (uNameError != "" || emailError != "" || passWordError != "" || confirmPasswordError != "") {
             setIsAddAble(false)
             return;
 
@@ -95,8 +95,8 @@ const Sign_up = () => {
                                             <label className="form-label" for="form3Example1cg">Your Name</label>
                                             <input type="text" id="form3Example1cg" className="form-control form-control-lg" value={uName} onChange={e => {
                                                 setUName(e.target.value);
-                                            }}/>
-                                            
+                                            }} />
+
                                             <label style={{ color: 'red' }}>{uNameError}</label>
                                         </div>
 
@@ -119,14 +119,14 @@ const Sign_up = () => {
                                             <label style={{ color: 'red' }}>{confirmPasswordError}</label>
                                         </div>
 
-                                        
+
 
 
                                         <div className="d-flex justify-content-center">
                                             {isAddAble == false ? <Button type="submit" className="btn btn-success" disabled >ADD</Button> : <Button type="submit" className="btn btn-success" >ADD</Button>}
                                         </div>
 
-                                        <p className="text-center text-muted mt-5 mb-0">Have already an account?
+                                        <p className="text-center text-muted mt-5 mb-0">Already have account?
                                             <a href="./Login"
                                                 className="fw-bold text-body"><u>Login here</u></a></p>
                                         <div className="from-btn-outline mb-4">
