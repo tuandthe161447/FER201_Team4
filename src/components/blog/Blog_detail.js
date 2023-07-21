@@ -175,12 +175,12 @@ const BlogDetail = () => {
     return (
         <Container>
             <Row className='pt-3'>
-                <Col xs={6}>
-                    <img src={p.img} alt="#" width={500} height={500} />
-                </Col>
-                <Col xs={6}>
-                    <h1 style={{ margin: '20px' }}>{p.name}</h1>
-                </Col>
+
+                <img src={p.img} alt="#" style={{height:'100%'}} />
+
+            </Row>
+            <Row>
+                <h1 style={{ margin: '20px' }}>{p.name}</h1>
             </Row>
             <Row className='pt-3'>
                 <h4>{content}</h4>
