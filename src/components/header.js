@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         //top header
-        <div className="row header-app" style={{position:'fixed', width:'100%', zIndex:'999'}}> 
+        <div className="row header-app" style={{position:'fixed', width:'100%', zIndex:'999', margin:'0'}}> 
             <Container>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="/">Travelling Blog</Navbar.Brand>
@@ -51,7 +51,8 @@ const Header = () => {
                             {
                                 (user != undefined) ? <Nav >
 
-                                    <NavDropdown title={"Hello" + user}>
+                                    <NavDropdown title={"Hello " + user}>
+                                        <NavDropdown.Item href="/profile">Edit profile</NavDropdown.Item>
                                         <NavDropdown.Item href="/login">Log Out</NavDropdown.Item>
                                         <NavDropdown.Item href="/login" >
                                             {
@@ -70,6 +71,18 @@ const Header = () => {
                                                 userrole == true ? <Nav>
                                                     <Nav.Link href='/usermanager'style={{color:'black'}}>
                                                         User Manage
+                                                    </Nav.Link>
+                                                    
+                                                </Nav>
+                                                    :
+                                                    <></>
+                                            }
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="/login" >
+                                            {
+                                                userrole == true ? <Nav>
+                                                    <Nav.Link href='/aPostManager'style={{color:'black'}}>
+                                                        Post Manage
                                                     </Nav.Link>
                                                     
                                                 </Nav>

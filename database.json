@@ -11,14 +11,14 @@
       "id": 2,
       "uName": "MeoBeo",
       "email": "meobeo@gmail.com",
-      "passWord": "12345678",
+      "passWord": "1321232123",
       "rId": false
     },
     {
       "id": 3,
       "uName": "PussySlayer69",
-      "email": "provip123@gmail.com",
-      "passWord": "12345678",
+      "email": "cuongdmthe170681@fpt.edu.vn",
+      "passWord": "12321321",
       "rId": false
     },
     {
@@ -32,6 +32,13 @@
       "id": 5,
       "uName": "XD Kekw",
       "email": "kekw@gmail.com",
+      "passWord": "12345678",
+      "rId": false
+    },
+    {
+      "id": 6,
+      "uName": "tien",
+      "email": "tien@gmail.com",
       "passWord": "12345678",
       "rId": false
     }
@@ -61,7 +68,7 @@
     },
     {
       "id": 2,
-      "name": "Kinh nghiệm du lịch Cát Bà 2023 từ A-Z",
+      "name": "Kinh nghiệm chuẩn bị cho chuyến du lịch hoàn hảo",
       "cid": 1,
       "img": "https://img.nhandan.com.vn/Files/Images/2022/03/23/HP2_1-1648033793048.jpg",
       "content": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
@@ -219,6 +226,11 @@
       "id": 5,
       "cid": 4,
       "title": "Are cats slowly taking over the world?"
+    },
+    {
+      "title": "Test",
+      "cid": 1,
+      "id": 6
     }
   ],
   "comment": [
@@ -249,8 +261,8 @@
     {
       "id": 5,
       "uid": 1,
-      "pid": 2,
-      "comment": "asda"
+      "pid": 6,
+      "comment": "test discussion"
     }
   ],
   "reply": [
@@ -289,6 +301,18 @@
       "uid": 1,
       "cid": 3,
       "comment": "noice"
+    },
+    {
+      "id": 9,
+      "uid": 1,
+      "cid": 5,
+      "comment": "test reply"
+    },
+    {
+      "id": 10,
+      "uid": 2,
+      "cid": 5,
+      "comment": "test reply 2"
     }
   ],
   "category_post": [
@@ -364,6 +388,14 @@
       "id": 12,
       "uid": 1,
       "pid": 2
+    },
+    {
+      "name": "Test",
+      "created_date": "3333-11-22",
+      "content": "<p><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">...............…………………………._¸„„„„_</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">…………………….…………...„--~*'¯…….'\\</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">………….…………………… („-~~--„¸_….,/ì'Ì</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">…….…………………….¸„-^\"¯ : : : : :¸-¯\"¯/'</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">……………………¸„„-^\"¯ : : : : : : : '\\¸„„,-\"</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">**¯¯¯'^^~-„„„----~^*'\"¯ : : : : : : : : : :¸-\"</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">.:.:.:.:.„-^\" : : : : : : : : : : : : : : : : :„-\"</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">:.:.:.:.:.:.:.:.:.:.: : : : : : : : : : ¸„-^¯</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">.::.:.:.:.:.:.:.:. : : : : : : : ¸„„-^¯</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">:.' : : '\\ : : : : : : : ;¸„„-~\"</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">:.:.:: :\"-„\"\"***/*'ì¸'¯</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">:.': : : : :\"-„ : : :\"\\</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">.:.:.: : : : :\" : : : : \\,</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">:.: : : : : : : : : : : : 'Ì</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">: : : : : : :, : : : : : :/</span><br><span style=\"color: rgb(25,25,25);font-size: 14px;font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;\">\"-„_::::_„-*__„„~\"</span>&nbsp;</p>\n",
+      "cid": 2,
+      "img": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+      "id": 13
     }
   ]
 }

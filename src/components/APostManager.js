@@ -1,28 +1,14 @@
 import { useEffect, useState } from "react";
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Container, Row, Col, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-
-
-function PostManager() {
+const APostManager = () => {
 
     const [post, setPost] = useState([])
-    const [postCat, setPostCat] = useState([])
-
-    const handerRemove = (code) => {
-        if (window.confirm('u sure bro ?')) {
-            fetch('http://localhost:9999/blog/' + code, {
-                method: "DELETE"
-            }).then((resp) => {
-                window.location.reload()
-            }).catch((err) => {
-                console.log(err.message)
-            })
-        }
-    }
+    const [Pcatergory, setPcatergory] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:9999/blog')
+        fetch('http://localhost:9999/post')
             .then((resp) => {
                 return resp.json()
             }).then((data) => {
@@ -32,40 +18,53 @@ function PostManager() {
             })
     }, [])
 
-
     useEffect(() => {
-        fetch('http://localhost:9999/category_blog')
+        fetch('http://localhost:9999/category_post')
             .then((resp) => {
                 return resp.json()
             }).then((data) => {
-                setPostCat(data)
+                console.log(Pcatergory)
+                setPcatergory(data)
             }).catch((err) => {
                 console.log(err.message)
             })
     }, [])
 
-    return (
+
+    const handerRemove = (code) => {
+        if (window.confirm('u sure bro ?')) {
+            fetch('http://localhost:9999/post/' + code, {
+                method: "DELETE"
+            }).then((resp) => {
+                window.location.reload()
+            }).catch((err) => {
+                console.log(err.message)
+            })
+        }
+    }
+
+
+    return (  
         <Container>
             <Row>
-                <Col>
-                    <h2>Blog manager</h2>
+                <Col>  
+                    <h2>Post Manager</h2>
                 </Col>
             </Row>
             <Row>
                 <Col style={{ textAlign: 'left', marginBottom: '10px' }}>
-                    <Link className="btn btn-primary" to={'/create'}>Add blog</Link>
+                    <Link className="btn btn-primary" to={'add'}>Add post</Link>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <Table striped bordered>
+                    <Table>
                         <thead>
                             <tr>
-                                <td>id</td>
-                                <td>title</td>
-                                <td>date</td>
+                                <td>ID</td>
+                                <td>Title</td>
                                 <td>catergory</td>
-                                <td>action</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,15 +72,16 @@ function PostManager() {
                                 post.map((p) => (
                                     <tr key={p.id}>
                                         <td>{p.id}</td>
-                                        <td>{p.name}</td>
-                                        <td>{p.created_date}</td>
+                                        <td>{p.title}</td>
                                         <td>
                                             {
-                                                postCat.map(c => (c.id === p.cid ? c.name : ''))
+                                                Pcatergory.map((c) => (
+                                                    c.id === p.cid ? c.name : ''
+                                                ))
                                             }
                                         </td>
                                         <td>
-                                            <Link className="btn btn-primary" to={'/edit/' + p.id} style={{ marginRight: '10px' }}>Edit</Link>
+                                        <Link className="btn btn-primary" to={'editPost/' + p.id} style={{ marginRight: '10px' }}>Edit</Link>
                                             <button className="btn btn-danger" onClick={() => { handerRemove(p.id) }}>Delete</button>
                                         </td>
                                     </tr>
@@ -92,8 +92,7 @@ function PostManager() {
                 </Col>
             </Row>
         </Container>
-
     );
 }
-
-export default PostManager;
+ 
+export default APostManager;
