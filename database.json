@@ -11,7 +11,7 @@
       "id": 2,
       "uName": "MeoBeo",
       "email": "meobeo@gmail.com",
-      "passWord": "1321232123",
+      "passWord": "1",
       "rId": false
     },
     {
@@ -199,6 +199,12 @@
       "uid": 2,
       "pid": 10,
       "comment": "em dep lam"
+    },
+    {
+      "id": 11,
+      "uid": 1,
+      "pid": 2,
+      "comment": "quào"
     }
   ],
   "post": [
@@ -226,11 +232,6 @@
       "id": 5,
       "cid": 4,
       "title": "Are cats slowly taking over the world?"
-    },
-    {
-      "title": "Test",
-      "cid": 1,
-      "id": 6
     }
   ],
   "comment": [
@@ -396,6 +397,11 @@
       "cid": 2,
       "img": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
       "id": 13
+    },
+    {
+      "id": 14,
+      "uid": 1,
+      "pid": 10
     }
   ]
 }

@@ -3,7 +3,7 @@
 function Footer() {
     return (
       
-            <footer className='text-center text-lg-start text-white' style={{ backgroundColor: 'rgb(28,35,49)', bottom: '0', width: '100%' }}>
+            <footer className='text-center text-lg-start text-white' style={{ backgroundColor: 'rgb(28,35,49)', position:'fixed', bottom: '0', width: '100%' }}>
                 <div style={{ backgroundColor: 'rgb(99,81,206)' }}>
                 <div className='d-flex justify-content-between p-4 container' style={{ backgroundColor: 'rgb(99,81,206)' }}>
                     <div className='me-5'>

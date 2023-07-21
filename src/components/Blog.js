@@ -116,7 +116,7 @@ const Blog = () => {
                                 ))
                             }
                         </Col>
-                        <Col xs={3}>
+                        <Col xs={3} style={{position:'fixed', right:'280px'}}>
                             <div>
                                 <Form onSubmit={handleSearch}>
                                     <Form.Control

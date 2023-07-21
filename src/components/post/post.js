@@ -88,7 +88,7 @@ const Posts = () => {
                                 ))
                             }
                         </Col>
-                        <Col xs={3}>
+                        <Col xs={3} style={{position:'fixed', right:'280px'}}>
                             <Form onSubmit={handleSearch}>
                                 <input className="form-control" style={{ width: '350px', height: '50px', borderRadius: '10px' }} 
                                 type="text" name="search" 
