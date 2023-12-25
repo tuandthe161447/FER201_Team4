@@ -6,11 +6,11 @@ import '../components/css/home.css'
 
 
 const Home = () => {
+    const [customers, setCustomers] = useState([]);
     const [blog, setBlog] = useState([]);
     const [posts, setPosts] = useState([]);
     const [category, setCategory] = useState([]);
     const [vote, setVote] = useState([]);
-
 
 
 
@@ -48,8 +48,8 @@ const Home = () => {
                 }).catch(err => {
                     console.log(err.message)
                 })
-            }
-        }, [])
+        }
+    }, [])
 
     useEffect(() => {
         fetch("http://localhost:9999/category_post")
@@ -78,7 +78,7 @@ const Home = () => {
 
 
     return (
-        
+
 
         <Container fluid>
             <Row>
@@ -86,24 +86,26 @@ const Home = () => {
             </Row>
             <Row>
                 <Container fluid>
+
+                    <h1 className='text-center pt-5 pb-3'>Trending Blogs</h1>
                     <Row>
-                        <Col>
-                            <h1 className='text-center pt-5 pb-3'>Trending Blogs</h1>
-                            <Row>
-                                {
-                                    blog.map(p => (
-                                        <Col xs={4}>
-                                            <Link to={'/blog/detail/' + p.id}>
-                                                <div className='box home pt-3' style={{ height: '600px' }}>
-                                                    <img src={p.img} alt="#" />
-                                                    <h2 style={{ color: 'black', margin: '10px' }}>{p.name}</h2>
-                                                </div>
-                                            </Link>
-                                        </Col>
-                                    ))
-                                }
-                            </Row>
-                        </Col>
+                            {
+
+                                blog.map(p => (
+                                    <Col xs={4} className='d-flex justify-content-around' >
+                                    <Link to={'/blog/detail/' + p.id} >
+                                        <div className='box home pb-3' style={{ 'paddingTop': '0px' }} >
+                                            <img src={p.img} alt="#" />
+                                            <h2 style={{ color: 'black', margin: '10px' }}>{p.name}</h2>
+                                            
+                                            <h2 style={{ color: 'black', margin: '10px' }}>{p.created_date}</h2>
+                                        </div>
+                                    </Link>
+                                    </Col>
+                                ))
+
+                            }
+                        
                     </Row>
                     <Row>
                         <Col>
@@ -111,7 +113,7 @@ const Home = () => {
                             <Row>
                                 {
                                     posts.map(p => (
-                                        <Col xs={4}>
+                                        <Col xs={4}  className='d-flex justify-content-around'>
                                             <Link to={'/post/detail/' + p.id}>
                                                 <div className='box home pt-3'>
                                                     <h2 className='pl-2' style={{ color: 'black', margin: '5px' }}>{p.title}</h2>
@@ -130,6 +132,7 @@ const Home = () => {
                         </Col>
                     </Row>
                 </Container>
+
             </Row>
         </Container>
     )

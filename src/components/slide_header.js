@@ -4,7 +4,7 @@
 function Slide_hearder() {
     return (
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style={{ width: '100%', right: '0px', }}>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style={{ width: '100%', right: '0px' }}>
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -20,7 +20,7 @@ function Slide_hearder() {
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img className="d-block w-100 myImg" src="https://cdnimg.vietnamplus.vn/uploaded/fsmsr/2020_01_08/2giai_nhi_ta_phin_mua_do_nuoc_tran_quoc_loc_resize.jpg" alt="Second slide" />
+                    <img className="d-block w-100 myImg" src="https://i1-dulich.vnecdn.net/2022/06/16/World-Travel-1-2359-1655367719.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=hXSrCG9JOjd-E825X6ajFg" alt="Second slide" />
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>

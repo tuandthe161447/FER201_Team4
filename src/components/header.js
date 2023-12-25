@@ -5,7 +5,7 @@ import { NavDropdown, Navbar, Nav, Container } from 'react-bootstrap';
 
 
 const Header = () => {
-   
+
     const [users, setUsers] = useState([]);
     let user
 
@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         //top header
-        <div className="row header-app" style={{position:'fixed', width:'100%', zIndex:'999', margin:'0'}}> 
+        <div className="row header-app" style={{ position: 'fixed', width: '100%', zIndex: '999', margin: '0' }}>
             <Container>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="/">Travelling Blog</Navbar.Brand>
@@ -57,10 +57,10 @@ const Header = () => {
                                         <NavDropdown.Item href="/login" >
                                             {
                                                 userrole == true ? <Nav>
-                                                    <Nav.Link href='/postmanager'style={{color:'black'}}>
+                                                    <Nav.Link href='/postmanager' style={{ color: 'black' }}>
                                                         Blog Manage
                                                     </Nav.Link>
-                                                    
+
                                                 </Nav>
                                                     :
                                                     <></>
@@ -69,10 +69,10 @@ const Header = () => {
                                         <NavDropdown.Item href="/login" >
                                             {
                                                 userrole == true ? <Nav>
-                                                    <Nav.Link href='/usermanager'style={{color:'black'}}>
+                                                    <Nav.Link href='/usermanager' style={{ color: 'black' }}>
                                                         User Manage
                                                     </Nav.Link>
-                                                    
+
                                                 </Nav>
                                                     :
                                                     <></>
@@ -81,23 +81,23 @@ const Header = () => {
                                         <NavDropdown.Item href="/login" >
                                             {
                                                 userrole == true ? <Nav>
-                                                    <Nav.Link href='/aPostManager'style={{color:'black'}}>
+                                                    <Nav.Link href='/aPostManager' style={{ color: 'black' }}>
                                                         Post Manage
                                                     </Nav.Link>
-                                                    
+
                                                 </Nav>
                                                     :
                                                     <></>
                                             }
                                         </NavDropdown.Item>
                                     </NavDropdown>
-                                </Nav> 
-                                : 
-                                <Nav>
-                                    <Nav.Link href="/login">Login</Nav.Link>
-                                    <Nav.Link href="/sign_up">Sign up</Nav.Link>
-
                                 </Nav>
+                                    :
+                                    <Nav>
+                                        <Nav.Link href="/login">Login</Nav.Link>
+                                        <Nav.Link href="/sign_up">Sign up</Nav.Link>
+
+                                    </Nav>
                             }
                         </Nav>
                     </Navbar.Collapse>
